@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Unsupervised Machine Learning"
+title: "Microsoft Azure's AI Capabilities"
 ---
 
-First quarter of grad school is finally over! Now with some free time, I finally learned Git (for BASH emulation), set up a GitHub account, and looking forward to collaborating on analytics projects. If you're interested in R or machine learning, one of my projects is a basic ML exercise that relies on the k-means algorithm for clustering.
+Building and training ML models takes a ton of time. Microsoft's Azure can now automate several steps in your AI development process including "data transformation, model selection and hyperparameter tuning." Really impressed that Azure is making this tech more accessible and easier to use. If you have hands-on work experience with Azure and don't mind me asking you some questions, please message me, thanks!
 
-Source: [Unsupervised Machine Learning via k-means Algorithm](https://javorraca.github.io/Unsupervised-ML/)
+Source: [Automated AI via Azure](https://blogs.microsoft.com/ai/automated-ai-development/)
