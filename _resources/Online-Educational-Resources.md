@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Fake News & Social Media"
+title: "Online Educational Resources"
 ---
 
 * [Codecademy](https://www.codecademy.com/): This is one of the best online interactive learning platforms that I've used - Codecademy offers free (and for pay) coding classes in several programming languages including Python, Java, JavaScript, SQL, and more
