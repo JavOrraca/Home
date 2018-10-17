@@ -4,8 +4,9 @@
 menu:
 - {name: 'Projects', url: ''}
 - {name: 'Blog', url: 'pages/blog.html'}
+- {name: 'Resources', url: 'pages/resources.html'}
+- {name: 'Scatter Podcast', url: 'pages/scatter.html'}
 - {name: 'About', url: 'pages/about.html'}
-- {name: 'Contact', url: 'pages/contact.html'}
 
 #-------------------------------
 # SEO Section
@@ -13,7 +14,7 @@ menu:
 # NOTE: Providing SEO information will make this website more searchable on the internet.
 
 seo:
-  description: 'Personal portfolio powered by Jekyll and GitHub Pages '
+  description: 'Javier Orraca data science scatter data podcast beginner resources personal portfolio powered by GitHub'
   rel-author: 'https://plus.google.com/u/0/#'
   rel-publisher: 'https://plus.google.com/u/0/#'
 
@@ -41,12 +42,9 @@ disqus:
 about: >
   # Portfolio Jekyll Theme
 
-  This is a personal portfolio theme that I built from the ground up, using the [DevTips Starter Kit](http://devtipsstarterkit.com/) as a foundation for starting, and following closely the amazing tutorial by [Travis Neilson over at DevTips](https://www.youtube.com/watch?v=T6jKLsxbFg4&list=PL0CB3OvPhDA_STygmp3sDenx3UpdOMk7P). You can [check out the demo](lenpaul.github.io/portfolio-jekyll-theme/), and [fork the repository](https://github.com/LeNPaul/portfolio-jekyll-theme/fork), to get started.
+  This is my data science portfolio for projects, blog posts, resources (for beginners and practitioners), and the Statter Data Podcast (coming soon!).
 
-contact: >
-  # Contact
-
-  You may contact me [through my email](mailto:l.nguyen.paul@gmail.com) or [tweet at me](https://twitter.com/intent/tweet?text=%40paululele) if you have any questions or would like to bring up any issues.
+  The easiest way to contact me is [through my email](mailto:orraca.javier@gmail.com) or [via LinkedIn](https://www.linkedin.com/in/orraca/) if you have any questions or want to collaborate. 
 
 #-------------------------------
 # Work Section
@@ -62,10 +60,10 @@ projects:
 # Contact Section
 
 social:
-- {icon: 'twitter', link: '#'}
-- {icon: 'instagram', link: '#'}
-- {icon: 'github', link: '#'}
-- {icon: 'linkedin', link: '#'}
-- {icon: 'envelope', link: 'mailto:#'}
+- {icon: 'twitter', link: 'https://twitter.com/Scatter_Podcast'}
+- {icon: 'instagram', link: 'https://www.instagram.com/iwantmorejavier/'}
+- {icon: 'github', link: 'https://javorraca.github.io/Home'}
+- {icon: 'linkedin', link: 'https://www.linkedin.com/in/orraca/'}
+- {icon: 'envelope', link: 'mailto:orraca.javier@gmail.com'}
 
 # social network icons available: 'twitter' / 'facebook' / 'github' / 'pinterest' 'google-plus' / 'linkedin' / 'youtube' / 'instagram' / 'dribbble' / 'behance' / 'soundcloud' / 'vine'
