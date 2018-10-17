@@ -5,7 +5,7 @@ menu:
 - {name: 'Projects', url: ''}
 - {name: 'Blog', url: 'pages/blog.html'}
 - {name: 'Resources', url: 'pages/resources.html'}
-- {name: 'Scatter Podcast', url: 'pages/scatter.html'}
+- {name: 'Scatter', url: 'pages/scatter.html'}
 - {name: 'About', url: 'pages/about.html'}
 
 #-------------------------------
