@@ -1,0 +1,8 @@
+---
+layout: post
+title: "Fake News & Social Media"
+---
+
+The dissemination of fake news on social media is widespread, often fueled by bots and reinforced through user sharing. On the most recent episode of the Data Skeptic, host Kyle Polich interviews Filippo Menczer to discuss how bots influence the spread of fake news. For anyone interested in data analytics, this is a great listen and the link below also references several tools for studying the spread of information on social media.
+
+Source: [Data Skeptic Podcast - The Spread of Fake News](https://dataskeptic.com/blog/episodes/2018/the-spread-of-fake-news)
