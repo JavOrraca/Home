@@ -9,4 +9,4 @@ If you're in the Los Angeles or Orange County areas and interested in learning h
 
 [Tickets](https://lnkd.in/ghZj9he)
 
-![](https://datascience.salon/wp-content/uploads/2017/06/DSS-LA-LOGO-WHITE-TEXT.png?884e01)
+![](https://datascience.salon/wp-content/uploads/2017/11/DSS-LOGO-HEADER.png?884e01)
