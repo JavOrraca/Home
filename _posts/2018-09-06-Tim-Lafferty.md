@@ -7,4 +7,4 @@ The data science community is super welcoming... It's been great connecting with
 
 Source: [Super Data Science Podcast, Episode 181](https://www.superdatascience.com/10-tips-data-science-consultant/)
 
-![](https://www.superdatascience.com/wp-content/themes/superdatascience/images/logo4.png)
+![](https://www.superdatascience.com/wp-content/uploads/2018/08/10-Tips-Data-Science-Consultant.png)
