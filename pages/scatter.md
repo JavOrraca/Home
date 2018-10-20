@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Scatter"
+title: "Scatter Data Podcast"
 ---
 
 #### COMING SOON...
