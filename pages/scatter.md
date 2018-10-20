@@ -5,4 +5,4 @@ title: "Scatter"
 
 #### COMING SOON...
 
-![](Home/assets/img/scatter/Scatter Logo.png)
+![](https://github.com/JavOrraca/Home/tree/gh-pages/assets/img/scatter/Scatter Logo.png)
