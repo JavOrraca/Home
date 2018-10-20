@@ -145,6 +145,9 @@ colnames(segment) <- "Segment"
 customer_segment_data <- cbind.data.frame(customer_data, segment)
 write.csv(customer_segment_data, "SC_customer_segment_data.csv")
 ```
+**Next Steps**
+
+We've completed our clustering exercise but what does this tell us? At this point, not much (at all!)... Data scientists and analysts have a responsibility to further analyze the data and better understand the similarities and dissimilarities of each cluster and the underlying data points. In this case, the data points represent individual Sun Country Airlines customers falling into one of five clusters. Head on over to [Unsupervised Machine Learning: Part 2/2](https://javorraca.github.io/Home/projects/proj-2.html) to see how the data was further analyzed.
 
 **Acknowledgments**
 * [UC Irvine, Machine Learning Repository](https://archive.ics.uci.edu/ml/index.php)
