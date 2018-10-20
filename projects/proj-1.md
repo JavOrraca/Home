@@ -121,7 +121,7 @@ plot(1:15, SSE_curve, type="b", main="SSE Curve for Ideal k-Value",
 ```
 
 
-![png](output_9_0.png)
+{% include image.html image="projects/proj-1/output_9_0" %}
 
 
 Given the plot above, the change in SSE decreases significantly after ~5 clusters. Let's select 5 clusters for the purpose of this customer segmentation.
