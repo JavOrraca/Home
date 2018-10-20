@@ -5,4 +5,4 @@ title: "Scatter Data Podcast"
 
 #### COMING SOON...
 
-![](https://github.com/JavOrraca/Home/blob/gh-pages/assets/img/ScatterLogo.png)
+![](assets/img/ScatterLogo.png)
