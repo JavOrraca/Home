@@ -5,4 +5,4 @@ title: "Scatter Data Podcast"
 
 #### COMING SOON...
 
-{% image="assets/img/ScatterLogo.png" %}
+{% include image="assets/img/ScatterLogo.png" %}
