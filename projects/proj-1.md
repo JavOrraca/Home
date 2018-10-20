@@ -4,18 +4,18 @@ title: 'Unsupervised Machine Learning: Part 1/2 (Clustering)'
 ---
 This exercise provides a guide for performing unsupervised machine learning via the k-means algorithm to cluster a company's customers via the R programming language.
 
-_Prerequisites_
+**Prerequisites**
 
 * [Anaconda Distribution](https://www.anaconda.com/distribution/): Allows for R environment installation, including Jupyter setup
 * [Jupyter](http://jupyter.org/): Web-based R notebook that can be launched via the Anaconda Navigator and natively reads the .ipynb document included in the Files folder
 * [dplyr](https://dplyr.tidyverse.org/): This R package is for data manipulation and is part of the tidyverse R toolset
 * [ade4](https://cran.r-project.org/web/packages/ade4/index.html): This R package can used for converting categorical data into numerical dummy data and for multivariate data analysis
 
-## Data
+**Data**
 
 The data used in this analysis reflects a historical snapshot of Sun Country Airlines customer data used for educational purposes. No private / personal identification information was included as part of this sample data set. This repository will not cover the full data cleanup and sanitization process. We'll start with a pre-processed data set ready for clustering via R. 
 
-## Running the code
+**Running the code**
 
 This clustering exercise can be summarized into four major parts:
   1. Data preparation
@@ -147,7 +147,7 @@ customer_segment_data <- cbind.data.frame(customer_data, segment)
 write.csv(customer_segment_data, "SC_customer_segment_data.csv")
 ```
 
-## Acknowledgments
+**Acknowledgments**
 
 * [UC Irvine, Machine Learning Repository](https://archive.ics.uci.edu/ml/index.php)
 * [UC Irvine, MS in Business Analytics curriculum](https://merage.uci.edu/programs/masters/master-science-business-analytics/curriculum.html)
