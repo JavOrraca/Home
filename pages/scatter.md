@@ -7,4 +7,4 @@ title: "Scatter Data Podcast"
 
 {% include image.html image="ScatterLogo.png" %}
 
-![](assets/img/ScatterLogo.png)
+![](https://raw.githubusercontent.com/JavOrraca/Home/gh-pages/assets/img/ScatterLogo.png)
