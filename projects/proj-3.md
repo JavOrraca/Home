@@ -1,5 +1,7 @@
-
-**IBM Watson NLU: What is it? And in R?!?**
+---
+layout: post
+title: 'IBM Watson NLU via R'
+---
 The following instructions provide a step-by-step guide for running IBM Watson's Natural Language Understanding (NLU) tool via R. Watson NLU is a powerful text analysis tool for extracting metadata from content such as concepts, entities, keywords, categories, sentiment, emotions, relations, and even semantic roles.
 
 One of the projects that I'm working on with a team is to analyze consumer-created Facebook and Twitter content to infer brand perceptions on social media. In my case, I'm analyzing Southwest and jetBlue content on Facebook and Twitter. My data preparation consists of the following: social media post and metadata collection, cleaning / organizing / categorizing data, and structuring the data into a dataframe for R or Excel / CSV data set. For this test set, we pulled all the data manually (I realize there are ways to automate this but our data set was about 50 posts per airline and source).
@@ -176,8 +178,11 @@ ggplot(mean_emotion_long,aes(x=Emotion,y=Mean,fill=factor(`Airline/Source`))) +
   geom_bar(stat="identity",position="dodge") +  scale_fill_brewer(name="Airline (Source)") +
   labs(title='Emotion Scores by Airline (Source)', x="Emotion", y="Mean")
 
-## Create a side-by-side bar chart for emotion score (airline/source on x-axis)
+## Create another view of the side-by-side bar chart for emotion score (this time, airline/source on x-axis)
 ggplot(mean_emotion_long,aes(x=`Airline/Source`,y=Mean,fill=factor(Emotion))) +
   geom_bar(stat="identity",position="dodge") +  scale_fill_brewer(name="Emotion") +
   labs(title='Emotion Scores by Airline (Source)', x="Airline (Source)", y="Mean")
 ```
+![](https://raw.githubusercontent.com/JavOrraca/Home/gh-pages/assets/img/projects/proj-3/SentimentSummary.jpeg)
+![](https://raw.githubusercontent.com/JavOrraca/Home/gh-pages/assets/img/projects/proj-3/EmotionSummary1.jpeg)
+![](https://raw.githubusercontent.com/JavOrraca/Home/gh-pages/assets/img/projects/proj-3/EmotionSummary2.jpeg)
