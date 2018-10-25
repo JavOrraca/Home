@@ -4,15 +4,15 @@ title: 'IBM Watson NLU via R'
 ---
 The following instructions provide a step-by-step guide for running IBM Watson's Natural Language Understanding (NLU) tool via R. Watson NLU is a powerful text analysis tool for extracting metadata from content such as concepts, entities, keywords, categories, sentiment, emotions, relations, and even semantic roles.
 
-One of the projects that I'm working on with a team is to analyze consumer-created Facebook and Twitter content to infer brand perceptions on social media. In my case, I'm analyzing Southwest and jetBlue content on Facebook and Twitter. My data preparation consists of the following: social media post and metadata collection, cleaning / organizing / categorizing data, and structuring the data into a dataframe for R or Excel / CSV data set. For this test set, we pulled all the data manually (I realize there are ways to automate this but our data set only included about 300 observations).
+One of the projects that I'm working on with a team is to analyze consumer-created Facebook and Twitter content to infer brand perceptions on social media. In our case, we analyzed Southwest and jetBlue content on Facebook and Twitter. Our data preparation consists of the following: social media post and metadata collection, cleaning / organizing / categorizing data, and structuring the data into a dataframe for R or Excel / CSV data set. For this test set, we pulled all the data manually (I realize there are ways to automate this but our data set only included about 300 observations).
 
-The code utilizes R to call Watson's NLU API and analyze social media content for sentiment analysis and emotions. I did not perform a time-series based study, however, this is definitely something I'll consider in the future to see how consumer perceptions of brands change over time. 
+The code utilizes R to call Watson's NLU API and analyze social media content for sentiment analysis and emotions. _Note: I did not perform a time-series based study, however, this is definitely something I'll consider in the future to see how consumer perceptions of brands change over time._
 
 **Prerequisites**
 * [IBM Watson NLU Demo](https://natural-language-understanding-demo.ng.bluemix.net): If you've read this far and want to stop or don't feel you have the skills/tools to continue, this link lets you test drive Watson NLU via their demo, free for public use and no signup required
 * [IBMid](https://myibm.ibm.com): If you don't have an IBMid, sign up for one here
 * [IBM Cloud Lite Account](https://www.ibm.com/cloud/lite-account): You'll need an IBMid to sign up for a free Cloud Lite account, but this is a prerequisite for API access to Watson NLU
-* R notebook: I typically use [RStudio (desktop)](https://www.rstudio.com/) if I'm solo or [Jupyter Labs (web-based)](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) if I'm collaborating with others
+* R notebook: I typically use [RStudio (desktop)](https://www.rstudio.com/) or [Jupyter Labs (web-based)](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906)
 * R packages: httr, jsonlite, xlsx (in my team's case, we collected our social data in Excel), reshape, dplyr, ggplot2
 
 **First, load the appropriate libraries, installing any of the packages you don't already have:**
