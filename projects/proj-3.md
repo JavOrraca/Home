@@ -15,7 +15,7 @@ The code utilizes R to call Watson's NLU API and analyze social media content fo
 * R notebook: I typically use [RStudio (desktop)](https://www.rstudio.com/) if I'm solo or [Jupyter Labs (web-based)](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) if I'm collaborating with others
 * R packages: httr, jsonlite, xlsx (in my team's case, we collected our social data in Excel), reshape, dplyr, ggplot2
 
-First, load the appropriate libraries, installing any of the packages you don't already have:
+**First, load the appropriate libraries, installing any of the packages you don't already have:**
 
 
 ```R
@@ -27,7 +27,7 @@ library(dplyr)
 library(ggplot2)
 ```
 
-After loading the libraries, set your working directory followed by reading your Excel file, CSV file, or URL, and assign this to variable "df":
+**After loading the libraries, set your working directory followed by reading your Excel file, CSV file, or URL, and assign this to variable "df":**
 
 
 ```R
@@ -38,7 +38,7 @@ setwd("{Enter your working directory here}")
 df <- read.xlsx("Sentiment Analysis SWA vs JB_Clean.xlsx", sheetIndex = 1, header = TRUE, colClasses = NA)
 ```
 
-Next, assign your IBM Watson NLU API username and password details to variables in order to send data to/from the Watson NLU. Replace the username and password astericks with your API credentials. The function assignment that follows, watsonNLUtoDF, is the bread and butter of this R code.
+**Next, assign your IBM Watson NLU API username and password details to variables in order to send data to/from the Watson NLU. Replace the username and password astericks with your API credentials. The function assignment that follows, watsonNLUtoDF, is the bread and butter of this R code.**
 
 
 ```R
@@ -135,7 +135,7 @@ watsonNLUtoDF <- function(data, username, password, verbose = F, language = 'en'
 }
 ```
 
-The last part of this code walks you through next steps of sending and collecting data to/from Watson NLU.
+**The last part of this code walks you through next steps of sending and collecting data to/from Watson NLU.**
 
 
 ```R
@@ -164,7 +164,7 @@ mean_emotion_long <- melt(mean_emotion, id.vars = "Airline/Source")
 colnames(mean_emotion_long) <- c("Airline/Source", "Emotion", "Mean")
 ```
 
-Lastly, below we'll visualize our results as bar charts with ggplot2: 
+**Lastly, below we'll visualize our results as bar charts with ggplot2:**
 
 
 ```R
