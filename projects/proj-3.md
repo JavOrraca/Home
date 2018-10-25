@@ -33,7 +33,8 @@ After loading the libraries, set your working directory followed by reading your
 ```R
 setwd("{Enter your working directory here}")
 
-## As I was processing an Excel file and not an URL, I relied on the xlsx package to read the first sheet of my Excel file, acknowledging that my top row has header names.
+## As I was processing an Excel file and not an URL, I relied on the xlsx package to read the first sheet
+## of my Excel file, acknowledging that my top row has header names.
 df <- read.xlsx("Sentiment Analysis SWA vs JB_Clean.xlsx", sheetIndex = 1, header = TRUE, colClasses = NA)
 ```
 
@@ -113,8 +114,7 @@ watsonNLUtoDF <- function(data, username, password, verbose = F, language = 'en'
       
       analyzedText <- data.frame(id = id,
                                  fromJSON(toJSON(content(watsonResponse), pretty = T), flatten = T)$analyzed_text,
-                                 stringsAsFactors = F)
-      
+                                 stringsAsFactors = F)   
       
       ## Append results to output dataframes
       conceptsDF <- rbind(conceptsDF, concepts)
