@@ -188,4 +188,5 @@ ggplot(mean_emotion_long,aes(x=`Airline/Source`,y=Mean,fill=factor(Emotion))) +
 ![](https://raw.githubusercontent.com/JavOrraca/Home/gh-pages/assets/img/projects/proj-3/EmotionSummary2.jpeg)
 
 **Conclusion**
+
 Since we had _really_ limited data, these Southwest vs jetBlue insights are purely for discussion purposes. _Nonetheless_, in our analysis of consumer-created Facebook and Twitter content (as of mid-October 2018), data suggests that Facebook and Twitter users have a better perception (sentiment) of Southwest. In addition, the Southwest content indicates more joy and less sadness compared with jetBlue (across Facebook and Twitter).
