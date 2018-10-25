@@ -22,7 +22,7 @@ This clustering exercise can be summarized into four major parts:
   3. Analyzing k-means clusters via sum of squared errors (SSE) comparison 
   4. Cluster assignment in data set
 
-To begin, install the dplyr and ade4 R packages for data manipulation and clustering (if not already installed).
+**To begin, install the dplyr and ade4 R packages for data manipulation and clustering (if not already installed).**
 
 ```R
 install.packages("dplyr")
@@ -32,7 +32,7 @@ install.packages("ade4")
 library(ade4)
 ```
 
-Then, download the file SC_data_CleanedUp.csv, assign it to "data" and then aggregate to the customer-trip level. Ensure aggregation was successful by 1) confirming the "customer_data" object is a data frame and 2) displaying the dimensions of the data frame.
+**Then, download the file SC_data_CleanedUp.csv, assign it to "data" and then aggregate to the customer-trip level. Ensure aggregation was successful by 1) confirming the "customer_data" object is a data frame and 2) displaying the dimensions of the data frame.**
 
 
 ```R
@@ -64,7 +64,7 @@ dim(customer_data)
 ```
 
 
-Remove unnecessary variables (encrypted names, customer IDs, etc.). Normalize the amt, days_pre_booked, and group_size variables.
+**Remove unnecessary variables (encrypted names, customer IDs, etc.). Normalize the amt, days_pre_booked, and group_size variables.**
 
 
 ```R
@@ -81,7 +81,7 @@ clustering_data = mutate(clustering_data,
   group_size = normalize(group_size))
 ```
 
-Since the k-means clustering algorithm works only with numerical data, we need to convert each of the categorical factor levels into numerical dummy variables ("0" or "1"). The ade4 package will be used to convert the categorical data into these numerical dummy variables.
+**Since the k-means clustering algorithm works only with numerical data, we need to convert each of the categorical factor levels into numerical dummy variables ("0" or "1"). The ade4 package will be used to convert the categorical data into these numerical dummy variables.**
 
 
 ```R
@@ -94,7 +94,7 @@ clustering_data <- clustering_data %>%
   ungroup()
 ```
 
-For cleanliness, remove the original, non-dummy-coded variables.
+**For cleanliness, remove the original, non-dummy-coded variables.**
 
 ```R
 clustering_data <- clustering_data %>%
@@ -102,9 +102,9 @@ clustering_data <- clustering_data %>%
          -true_destination,-UflyMemberStatus,-seasonality)
 ```
 
-We'll now run k-means to gain a better understanding at the within SSE curve. Plot to visualize and understand the impact on SSE comparing 1 to 15 clusters.
+**We'll now run k-means to gain a better understanding at the within SSE curve. Plot to visualize and understand the impact on SSE comparing 1 to 15 clusters.**
 
-_Note: The sum of squared errors (or "SSE") is the sum of the squared differences between each observation and its cluster's mean. In the context of this clustering analysis, SSE is used as a measure of variation. If all observations within a cluster are identical, the SSE would be equal to 0. Modeling for "the lowest SSE possible" is not ideal as this results in model overfitting._
+**_Note: The sum of squared errors (or "SSE") is the sum of the squared differences between each observation and its cluster's mean. In the context of this clustering analysis, SSE is used as a measure of variation. If all observations within a cluster are identical, the SSE would be equal to 0. Modeling for "the lowest SSE possible" is not ideal as this results in model overfitting._**
 
 
 ```R
@@ -123,7 +123,7 @@ plot(1:15, SSE_curve, type="b", main="SSE Curve for Ideal k-Value",
 ![](https://raw.githubusercontent.com/JavOrraca/Home/gh-pages/assets/img/projects/proj-1/output_9_0.png)
 
 
-Given the plot above, the change in SSE decreases significantly after ~5 clusters. Let's select 5 clusters for the purpose of this customer segmentation.
+**Given the plot above, the change in SSE decreases significantly after ~5 clusters. Let's select 5 clusters for the purpose of this customer segmentation.**
 
 
 ```R
@@ -136,7 +136,7 @@ kcluster$size
 3909  3384  2325  4656  3672
 ```
 
-Lastly, add a new column with the cluster assignment into the CSV file, and call this field "Segment", for each observation in customer_data. After running the code below, this analysis will be completed.
+**Lastly, add a new column with the cluster assignment into the CSV file, and call this field "Segment", for each observation in customer_data. After running the code below, this analysis will be completed.**
 
 
 ```R
