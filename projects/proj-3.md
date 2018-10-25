@@ -190,3 +190,7 @@ ggplot(mean_emotion_long,aes(x=`Airline/Source`,y=Mean,fill=factor(Emotion))) +
 **Conclusion**
 
 Since we had _really_ limited data, these Southwest vs jetBlue insights are purely for discussion purposes. _Nonetheless_, in our analysis of consumer-created Facebook and Twitter content (as of mid-October 2018), data suggests that Facebook and Twitter users have a better perception (sentiment) of Southwest. In addition, the Southwest content indicates more joy and less sadness compared with jetBlue (across Facebook and Twitter).
+
+**Acknowledgements**
+
+This was my first time _ever_ using API tools, and definitely struggled with accessing Watson NLU's emotion dataframes via R. I based my initial code off of [Rafi Kurlansik](https://www.linkedin.com/in/raphaelkurlansik/)'s community post on [Retrieving Dataframes from Watson NLU](https://dataplatform.cloud.ibm.com/analytics/notebooks/03ed6b90-9167-4096-ac90-bb9b781c9e35/view?access_token=97a530d841a7e00a36a18ba4e3c2cfdba1a5b2372a782c1b4e89c29b212b4ba9). Let me tell you folks... Rafi went out of his way, way above and beyond, to help a stranger with his R and Watson NLU problems (and was responsive as hell). Rafi works for IBM's Hybrid Cloud team as a Data Science Specialist and turns out to be a really nice guy too. Thanks again for your help!
