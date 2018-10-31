@@ -5,7 +5,7 @@ title: "DataScienceGO 2018 (Part 2/2 - Tools)"
 
 Now that I've had a few weeks to digest my experience at DataScienceGO 2018, definitely one for the books. I especially enjoyed making so many connections and absorbing (or rather, writing-a-million-miles-an-hour) so much knowledge over a short weekend. As promised, I wanted to share useful resources that I learned of at DSGO. Below I'm presenting my favorites, by presenter.
 
-Send me a note here or on LinkedIn if you have any questions. I have also updated my [Resources](https://javorraca.github.io/Home/pages/resources.html) page with the information below.
+Send me a note here or on LinkedIn if you have any questions. **I'll be updating this list with two more presenters and I plan on incorporating the tools / resources below into my [Resources](https://javorraca.github.io/Home/pages/resources.html) page in a few days.**
 
 [**Nadieh Bremer**](https://www.linkedin.com/in/nbremer/): Data visualization designer that was the first presenter at DSGO... The conference couldn't have started with a better presenter. She blew away the crowd showcasing some of the freelancing work she does.
 * [Visual Cinnamon](https://www.visualcinnamon.com/): Nadieh's data visualization portfolio is a work of art, and data storytelling was made to look this way. She uses D3 and JavaScript to make unique, beautifully designed interactive visualizations on the web.
