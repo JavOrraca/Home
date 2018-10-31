@@ -3,6 +3,7 @@ layout: post
 title: "DataScienceGO 2018 (Part 2/2 - Tools)"
 ---
 
-Now that I've had a few weeks to digest my experience at DataScienceGO 2018, definitely one for the books, and I love how much knowledge was pushed over a short weekend. As promised, I wanted to share my favorite   blast and a LOT of intel was given to us  was a blast! Kirill Eremenko, Hadelin de Ponteves, SuperDataScience, Formulatedby, and all the crew/staff put on a great conference.... Career advice from business intelligence and data science executives, practical use cases for machine learning and artificial intelligence, data storytelling tips and visualization resources, LOTS of "secret sauce" from thought leaders, lots of networking (and lots of Pablos!)... It will take me a week just to digest my notes but I will share my favorite insights and resources. Looking forward to more of these in the future, and 2019 tickets already available (and heavily discounted at the mooment)!
+Now that I've had a few weeks to digest my experience at DataScienceGO 2018, definitely one for the books. I especially enjoyed making so many connections and absorbing (or rather, writing-a-million-miles-an-hour) so much knowledge over a short weekend. As promised, I wanted to share my highlights and new resources that I learned of at this conference. Below is my list of favorite takeaways, by presenter.
 
-Source: [DataScienceGO 2019 Tickets](https://www.datasciencego.com/)
+As always, send me a note here or on LinkedIn if you have any questions. I've also updated my Resources page with the information below.
+
