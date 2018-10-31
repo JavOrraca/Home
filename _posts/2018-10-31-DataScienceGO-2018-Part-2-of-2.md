@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "DataScienceGO 2018 (Part 2/2 - Tools)"
+title: "DataScienceGO 2018 (Part 2/2 - Tips & Resources)"
 ---
 
 Now that I've had a few weeks to digest my experience at DataScienceGO 2018, definitely one for the books. I especially enjoyed making so many connections and absorbing (or rather, writing-a-million-miles-an-hour) so much knowledge over a short weekend. As promised, I wanted to share useful resources that I learned of at DSGO. Below I'm presenting my favorites, by presenter.
