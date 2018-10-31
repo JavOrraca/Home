@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "_REALLY_ Learning Machine Learning"
+title: "Learning Machine Learning, by Hand"
 ---
 
 Machine learning via R, Python, (enter your tool of choice here)... Not bad. But doing learning to do machine learning by hand, wow... This is a true study of patience!
