@@ -5,7 +5,7 @@ title: "Resources"
 
 Below is a list of data science resources to introduce you to the world of data analytics, data science, and programming. I'll update periodically as I learn of new resources and tools. R, Python, and SQL are programming languages used for data collection, data manipulation, data analytics, statistical analysis, web scraping, machine learning, and artificial intelligence. If you have any suggestions or questions, please contact me via LinkedIn or email, thanks.
 
-#### Online Educational Resources
+**Online Educational Resources**
 
 * [Codecademy](https://www.codecademy.com/): This is one of the best online interactive learning platforms that I've used - Codecademy offers free (and for pay) coding classes in several programming languages including Python, Java, JavaScript, SQL, and more
 * [Kaggle](https://www.kaggle.com/): World's largest community of data scientists and machine learners, with discussion boards, downloadable datasets, and competitions to reinforce your programming skills with R, Python, etc.
@@ -15,7 +15,7 @@ Below is a list of data science resources to introduce you to the world of data 
 * [Udacity's Data Science Nanodegree](https://www.udacity.com/course/data-scientist-nanodegree--nd025): I know two people who have taken this course and raved about it, but it requires some understanding of statistics and experience working with data (Udacity has other data science courses that are easier difficulty)
 * [Fast.ai](http://www.fast.ai/): For the more advanced data science students, Fast.ai provides free, high-quality, highly-reviewed machine learning and deep learning courses
 
-#### Podcasts
+**Podcasts**
 Outside of the classroom, podcasts help me stay current with data science news and local events. If you have any podcast suggestions that touch on analytics careers, data science, machine learning, or artificial intelligence, I'd love to hear from you!
 
 * [Super Data Science Podcast](https://soundcloud.com/superdatascience): Hosted by Kirill Eremenko, the goal of the Super Data Science podcast is to bring you the most inspiring data scientists and analysts from around the world
@@ -23,7 +23,7 @@ Outside of the classroom, podcasts help me stay current with data science news a
 * [The Science of Social Media](https://soundcloud.com/the-science-of-social-media): Created by Buffer (social media account management and post scheduling tool), this podcast is great for understanding how data science is being used in marketing and advertising, and explores technologies around social media analytics
 * [Linear Digressions](http://lineardigressions.com/): This podcast is great for students and practitioners, each episode covering the complexities of a specific data science topic, e.g., A/B testing and compliance bias, data privacy laws, text analysis (and tools like Word2Vec), computational limitations, AutoML tools, etc.
 
-#### Books
+**Books**
 
 * Eremenko, Kirill. _Confident Data Skills: Master the Fundamentals of Working with Data and Supercharge Your Career_. Kogan Page, 2018.
   * From the creator of Super Data Science, this was an easy "for fun" read, light math, and provides an overview of data analytics and careers in this field. I swear I'm not on Kirill's payroll(!)... he's just a data science career guru with fresh perspectives. [Amazon link](https://www.amazon.com/gp/product/0749481544/ref=as_li_tl?ie=UTF8&tag=superdatascie-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0749481544&linkId=bb7507851a740c1eb7f45ab4b6bd2a84)
@@ -35,7 +35,7 @@ Outside of the classroom, podcasts help me stay current with data science news a
   * Ideal for beginners, Scott Murray takes you through easy-to-consume fundamental concepts and methods of D3, the most powerful JavaScript library for web-based visualizations. [Amazon link](https://www.amazon.com/Interactive-Data-Visualization-Web-Introduction/dp/1491921285)
   *  _Note: This 2nd Edition (October 2017) release was updated with D3's v4 syntax and D3 v5 was released in April 2018. While some of the syntax in this 2nd Edition may be rendered obsolete, it's still a valuable resource for learning the fundamentals of D3 and data design._
 
-#### R: The Basics
+**R: The Basics**
 * [RStudio](https://www.rstudio.com/products/rstudio/download/): To get started with R, download and install RStudio's open-source desktop IDE
 * [swirl](https://swirlstats.com/students.html): Once RStudio is installed (or your IDE of choice), installing the swirl package is as easy as typing _install.packages("swirl")_ in the RStudio console
   * This R package includes 15 interactive lessons (about 30 minutes each) that teach you the fundamentals of R programming and the data structures
@@ -48,7 +48,7 @@ Outside of the classroom, podcasts help me stay current with data science news a
 
 ![alt text](http://felixfan.github.io/figure/ggplot2-Cheatsheet-20.png "Grouping multiple plots via ggplot2")
 
-#### Python: The Basics
+**Python: The Basics**
 _Many online Python trainings were made when Python 2.x was standard. Python 3.x is the future of the language, so don't bother installing Python 2.x (syntax between the two is very similar). Ping me if you need help._    
 
 * [PyCharm](https://www.jetbrains.com/pycharm/): A plethora of Python IDEs exist, PyCharm just happens to be my Python desktop IDE of choice
@@ -63,9 +63,9 @@ _Many online Python trainings were made when Python 2.x was standard. Python 3.x
   * [Google's Python Class (Day 2, Part 3)](https://www.youtube.com/watch?v=Nn2KQmVF5Og): URLs and HTTP, Exceptions
   * [Google's Python Class (Day 2, Part 4)](https://www.youtube.com/watch?v=IcteAbMC1Ok): Conclusion
 
-#### SQL: The Basics
+**SQL: The Basics**
   * [SQLZOO](http://sqlzoo.net/wiki/SQL_Tutorial): Learn SQL in stages with these free, interactive tutorials
   * [The Try-SQL Editor](http://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all): The SQL Tryit Editor lets you practice SQL statements with pre-populated data sets
 
-#### Other Stuff
+**Other Stuff**
 * [33mail](https://33mail.com/): I’ve learned a lot about the harvesting, sale, and use of personal digital data for commercial purposes. Privacy-enhancing services such as 33mail allow you to create new email addresses instantly for forwarding purposes.
