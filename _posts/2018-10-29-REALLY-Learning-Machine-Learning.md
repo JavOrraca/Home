@@ -1,8 +1,10 @@
 ---
 layout: post
-title: "DataScienceGO 2018 Conference"
+title: "_REALLY_ Learning Machine Learning"
 ---
 
-DataScienceGO 2018 was a blast! Kirill Eremenko, Hadelin de Ponteves, SuperDataScience, Formulatedby, and all the crew/staff put on a great conference.... Career advice from business intelligence and data science executives, practical use cases for machine learning and artificial intelligence, data storytelling tips and visualization resources, LOTS of "secret sauce" from thought leaders, lots of networking (and lots of Pablos!)... It will take me a week just to digest my notes but I will share my favorite insights and resources. Looking forward to more of these in the future, and 2019 tickets already available (and heavily discounted at the mooment)!
+Machine learning via R, Python, (enter your tool of choice here)... Not bad. But doing learning to do machine learning by hand, wow... This is a true study of patience!
 
-Source: [DataScienceGO 2019 Tickets](https://www.datasciencego.com/)
+For a school assignment, we had to deconstruct a supervised machine learning model (Naive Bayes) using one data set for training and another for testing, all by hand. This was definitely rewarding being able to understand the depth of conditional probabilities in this classifier model. I also have a new appreciation for the "curse of dimensionality" and how that is countered (_somewhat_) by the computational power we have at our fingertips.
+
+More info: [Naive Bayes Classifier](https://brilliant.org/wiki/naive-bayes-classifier/)
