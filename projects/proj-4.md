@@ -389,14 +389,13 @@ write.csv(NFL_by_Team, "NFL_by_Team.csv")
      $ ValuationChange5Yr    : num  2.15 2.31 1.73 1.71 1.84 ...
     
 
-# 3. Exploration through Visualizations
+**3. Exploration through Visualizations**
+Unfortunately, I'm having issues bringing in my Plotly and gganimate interactive plots and animations to this GitHub post, but feel free to contact me via LinkedIn or email and I'll get those HTML files to you. For now, below are some static charts built with ggplot + plotly + gganimate.  
 
-# 4. Poisson Regression
-
+**4. Poisson Regression**
+The first thing we do is to create two data frames and row-bind them for running Poisson regressions and later for calculating game simulation probabilities.
 
 ```R
-# Create two data frames for running Poisson regressions
-set.seed(123)
 NFL_Poisson <- rbind(
     data.frame(Points=NFL_Trim$HomeGoals,
                Team=NFL_Trim$Team,
@@ -410,8 +409,6 @@ glm(Points ~ Home + Team + Opponent, family=poisson(link=log), data=.)
 summary(NFL_Poisson)
 ```
 
-
-    
     Call:
     glm(formula = Points ~ Home + Team + Opponent, family = poisson(link = log), 
         data = .)
@@ -494,10 +491,8 @@ summary(NFL_Poisson)
         Null deviance: 19855  on 1063  degrees of freedom
     Residual deviance: 19315  on 1000  degrees of freedom
     AIC: 22013
-    
+   
     Number of Fisher Scoring iterations: 6
-    
-
 
 Similar to logistic regression, we take the exponent of the parameter Estimate values. A positive value implies more points (e<sup>x</sup>>1∀x>0), while values closer to zero represent more neutral effects (e<sup>0</sup>=1). Home has an Estimate of 0.094649. Historically when predicing NFL scores, Home would have captured the fact that home teams generally score more points than away teams. However, as we take the exponent of the Estimate coefficient for Home, home teams were only 9.9% (e<sup>0.094649</sup>=1.099) more likely to score.
 
@@ -571,7 +566,7 @@ sum(PatriotsVsRams[upper.tri(PatriotsVsRams)])
 0.535646822597374
 
 
-**Forecast Conclusions**
+**6. Forecast Conclusions**
 * Our predictions indicate that the Super Bowl will be an extremely close game!!!
 * Even with the New England Patriots having the home team advantage (due to heavier fanbase predicted to be Super Bowl 53), they're projected to lose
 * Our regression analysis and simulations favor the Los Angeles Rams narrowly leading with a final score of 15-14
