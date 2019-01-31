@@ -9,7 +9,7 @@ We spent a significant amount of time exploring NFL data sets (by team, player, 
 **Prerequisites**
 * R notebook: I use [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) almost exclusively nowadays for projects like these, but if you're just starting out, [RStudio (desktop)](https://www.rstudio.com/) is a much better beginner platform in my opinion
 * R packages:
-  * dplyr, sqldf, fastDummies (for fast dummy variable building, i.e., the process of converting categorical variables to binary variables for more efficient modeling xlsx (in my team's case, we collected our social data in Excel), reshape, dplyr, ggplot2
+  * dplyr, sqldf, fastDummies (this one is new to me, but worked great for fast conversions of categorical variables to binary variables), ggplot2, 
 
 
 # Super Bowl 53: Final Score Predictions
@@ -510,36 +510,27 @@ Below, we'll create additional regression models for consideration in our ensemb
 # Additional 
 ```
 
-# 5. Simulation Modeling
+**5. Simulation Modeling**
 
 In order to predict the outcome of Super Bowl 53, one of the finalists would (or should) be assigned a home team advantage. Both Super Bowl 53 teams are playing away, however, the Los Angeles Rams do not have a wide-reaching fanbase and sports forecasters / ticket brokers are predicting that majority of the fanbase present at Super Bowl 53 to be Patriots fans. As such, we'll assign the Patriots with the home team advantage.
 
 We will pass the teams into NFL_Poisson and the model will return the expected average number of points for the team (we need to run it twice to calculate the expected average number of points for each team separately). Below is the code and results for how many points we expect the Los Angeles Rams and the New England Patriots to score, giving the home team advantage to the Patriots.
-
 
 ```R
 predict(NFL_Poisson,
         data.frame(Home=1, Team="New England Patriots",
                    Opponent="Los Angeles Rams"), type="response")
 ```
-
-
-<strong>1:</strong> 14.3442631436516
-
-
+14.3442631436516
 
 ```R
 predict(NFL_Poisson,
         data.frame(Home=0, Team="Los Angeles Rams",
                    Opponent="New England Patriots"), type="response")
 ```
-
-
-<strong>1:</strong> 15.3345232802124
-
+15.3345232802124
 
 The above results show a super tight range, predicting that the Los Angeles Rams will beat the New England Patriots 15 to 14, depsite the Patriots having the home team advantage. Given the tight above results, we'll create a Super Bowl simulation function as follows:
-
 
 ```R
 # Create function (and prepare underlying data frames) for simulation
@@ -555,83 +546,36 @@ SuperBowl_Simulate <- function(NFL_Model, HomeTeam, AwayTeam, MaxPoints=40){
 
 # Simulate for the teams at Super Bowl 53, listing the Home-advantage team first.
 set.seed(123)
-Plot4 <- SuperBowl_Simulate(NFL_Poisson, "New England Patriots", "Los Angeles Rams", MaxPoints=16)
-Plot4df <- as.data.frame(Plot4)
-Plot4
+SuperBowl_Simulate(NFL_Poisson, "New England Patriots", "Los Angeles Rams", MaxPoints=16)
 ```
 
-
-<table>
-<tbody>
-	<tr><td>1.290229e-13</td><td>1.978505e-12</td><td>1.516971e-11</td><td>7.754011e-11</td><td>2.972602e-10</td><td>9.116686e-10</td><td>2.330000e-09</td><td>5.104207e-09</td><td>9.783822e-09</td><td>1.667003e-08</td><td>2.556269e-08</td><td>3.563561e-08</td><td>4.553792e-08</td><td>5.371556e-08</td><td>5.883590e-08</td><td>6.014803e-08</td><td>5.764633e-08</td></tr>
-	<tr><td>1.850739e-12</td><td>2.838019e-11</td><td>2.175984e-10</td><td>1.112256e-09</td><td>4.263978e-09</td><td>1.307721e-08</td><td>3.342214e-08</td><td>7.321608e-08</td><td>1.403417e-07</td><td>2.391193e-07</td><td>3.666780e-07</td><td>5.111665e-07</td><td>6.532079e-07</td><td>7.705102e-07</td><td>8.439576e-07</td><td>8.627792e-07</td><td>8.268942e-07</td></tr>
-	<tr><td>1.327374e-11</td><td>2.035465e-10</td><td>1.560644e-09</td><td>7.977245e-09</td><td>3.058181e-08</td><td>9.379150e-08</td><td>2.397080e-07</td><td>5.251154e-07</td><td>1.006549e-06</td><td>1.714995e-06</td><td>2.629863e-06</td><td>3.666154e-06</td><td>4.684893e-06</td><td>5.526200e-06</td><td>6.052975e-06</td><td>6.187966e-06</td><td>5.930594e-06</td></tr>
-	<tr><td>6.346734e-11</td><td>9.732414e-10</td><td>7.462097e-09</td><td>3.814256e-08</td><td>1.462245e-07</td><td>4.484566e-07</td><td>1.146145e-06</td><td>2.510798e-06</td><td>4.812736e-06</td><td>8.200112e-06</td><td>1.257448e-05</td><td>1.752942e-05</td><td>2.240045e-05</td><td>2.642309e-05</td><td>2.894182e-05</td><td>2.958727e-05</td><td>2.835667e-05</td></tr>
-	<tr><td>2.275981e-10</td><td>3.490108e-09</td><td>2.675957e-08</td><td>1.367817e-07</td><td>5.243707e-07</td><td>1.608195e-06</td><td>4.110151e-06</td><td>9.003886e-06</td><td>1.725879e-05</td><td>2.940614e-05</td><td>4.509292e-05</td><td>6.286167e-05</td><td>8.032948e-05</td><td>9.475494e-05</td><td>1.037873e-04</td><td>1.061019e-04</td><td>1.016889e-04</td></tr>
-	<tr><td>6.529453e-10</td><td>1.001260e-08</td><td>7.676926e-08</td><td>3.924067e-07</td><td>1.504342e-06</td><td>4.613674e-06</td><td>1.179142e-05</td><td>2.583082e-05</td><td>4.951292e-05</td><td>8.436189e-05</td><td>1.293649e-04</td><td>1.803409e-04</td><td>2.304534e-04</td><td>2.718380e-04</td><td>2.977504e-04</td><td>3.043907e-04</td><td>2.917304e-04</td></tr>
-	<tr><td>1.561003e-09</td><td>2.393724e-08</td><td>1.835331e-07</td><td>9.381308e-07</td><td>3.596447e-06</td><td>1.102996e-05</td><td>2.818986e-05</td><td>6.175402e-05</td><td>1.183711e-04</td><td>2.016848e-04</td><td>3.092741e-04</td><td>4.311428e-04</td><td>5.509475e-04</td><td>6.498859e-04</td><td>7.118350e-04</td><td>7.277100e-04</td><td>6.974429e-04</td></tr>
-	<tr><td>3.198777e-09</td><td>4.905172e-08</td><td>3.760924e-07</td><td>1.922399e-06</td><td>7.369769e-06</td><td>2.260238e-05</td><td>5.776612e-05</td><td>1.265451e-04</td><td>2.425636e-04</td><td>4.132886e-04</td><td>6.337584e-04</td><td>8.834894e-04</td><td>1.128991e-03</td><td>1.331733e-03</td><td>1.458678e-03</td><td>1.491209e-03</td><td>1.429186e-03</td></tr>
-	<tr><td>5.735513e-09</td><td>8.795135e-08</td><td>6.743460e-07</td><td>3.446925e-06</td><td>1.321424e-05</td><td>4.052681e-05</td><td>1.035765e-04</td><td>2.268996e-04</td><td>4.349246e-04</td><td>7.410401e-04</td><td>1.136350e-03</td><td>1.584126e-03</td><td>2.024318e-03</td><td>2.387842e-03</td><td>2.615458e-03</td><td>2.673787e-03</td><td>2.562578e-03</td></tr>
-	<tr><td>9.141301e-09</td><td>1.401775e-07</td><td>1.074777e-06</td><td>5.493733e-06</td><td>2.106095e-05</td><td>6.459191e-05</td><td>1.650810e-04</td><td>3.616341e-04</td><td>6.931859e-04</td><td>1.181075e-03</td><td>1.811122e-03</td><td>2.524790e-03</td><td>3.226372e-03</td><td>3.805759e-03</td><td>4.168536e-03</td><td>4.261501e-03</td><td>4.084255e-03</td></tr>
-	<tr><td>1.311252e-08</td><td>2.010743e-07</td><td>1.541689e-06</td><td>7.880356e-06</td><td>3.021037e-05</td><td>9.265234e-05</td><td>2.367966e-04</td><td>5.187375e-04</td><td>9.943240e-04</td><td>1.694165e-03</td><td>2.597921e-03</td><td>3.621626e-03</td><td>4.627992e-03</td><td>5.459081e-03</td><td>5.979458e-03</td><td>6.112809e-03</td><td>5.858563e-03</td></tr>
-	<tr><td>1.709904e-08</td><td>2.622057e-07</td><td>2.010399e-06</td><td>1.027617e-05</td><td>3.939505e-05</td><td>1.208209e-04</td><td>3.087884e-04</td><td>6.764461e-04</td><td>1.296622e-03</td><td>2.209232e-03</td><td>3.387752e-03</td><td>4.722687e-03</td><td>6.035013e-03</td><td>7.118772e-03</td><td>7.797356e-03</td><td>7.971249e-03</td><td>7.639706e-03</td></tr>
-	<tr><td>2.043943e-08</td><td>3.134289e-07</td><td>2.403142e-06</td><td>1.228368e-05</td><td>4.709108e-05</td><td>1.444239e-04</td><td>3.691118e-04</td><td>8.085934e-04</td><td>1.549924e-03</td><td>2.640817e-03</td><td>4.049567e-03</td><td>5.645288e-03</td><td>7.213984e-03</td><td>8.509462e-03</td><td>9.320610e-03</td><td>9.528474e-03</td><td>9.132163e-03</td></tr>
-	<tr><td>2.255297e-08</td><td>3.458390e-07</td><td>2.651638e-06</td><td>1.355387e-05</td><td>5.196053e-05</td><td>1.593580e-04</td><td>4.072798e-04</td><td>8.922059e-04</td><td>1.710194e-03</td><td>2.913890e-03</td><td>4.468311e-03</td><td>6.229039e-03</td><td>7.959945e-03</td><td>9.389382e-03</td><td>1.028441e-02</td><td>1.051376e-02</td><td>1.007647e-02</td></tr>
-	<tr><td>2.310755e-08</td><td>3.543433e-07</td><td>2.716842e-06</td><td>1.388716e-05</td><td>5.323825e-05</td><td>1.632766e-04</td><td>4.172949e-04</td><td>9.141455e-04</td><td>1.752248e-03</td><td>2.985543e-03</td><td>4.578188e-03</td><td>6.382212e-03</td><td>8.155682e-03</td><td>9.620269e-03</td><td>1.053730e-02</td><td>1.077230e-02</td><td>1.032426e-02</td></tr>
-	<tr><td>2.209738e-08</td><td>3.388529e-07</td><td>2.598074e-06</td><td>1.328007e-05</td><td>5.091090e-05</td><td>1.561389e-04</td><td>3.990525e-04</td><td>8.741829e-04</td><td>1.675647e-03</td><td>2.855028e-03</td><td>4.378049e-03</td><td>6.103209e-03</td><td>7.799150e-03</td><td>9.199711e-03</td><td>1.007666e-02</td><td>1.030138e-02</td><td>9.872923e-03</td></tr>
-	<tr><td>1.981067e-08</td><td>3.037872e-07</td><td>2.329216e-06</td><td>1.190580e-05</td><td>4.564246e-05</td><td>1.399811e-04</td><td>3.577571e-04</td><td>7.837193e-04</td><td>1.502245e-03</td><td>2.559579e-03</td><td>3.924993e-03</td><td>5.471627e-03</td><td>6.992066e-03</td><td>8.247692e-03</td><td>9.033888e-03</td><td>9.235357e-03</td><td>8.851238e-03</td></tr>
-</tbody>
-</table>
-
-
-
-The matrix above shows the probability of the New England Patriots (rows of the matrix) and the Los Angeles Rams (matrix columns) scoring a specific number of points. For example, along the diagonal, both teams have the same number of points (e.g. P(0-0) = 1.290229e-13). We can calculate the odds of draw by summing all the diagonal entries. Everything below the diagonal represents a Patriots win (e.g P(8-0) = 3.198777e-09). Using matrix manipulation functions, we can perform these types of calculations to understand the chances of winning.
-
-
-```R
-h <- ggplot(Plot4df, aes(Plot4[,1], Plot4[,2]))
-h + geom_hex(bins=7)
-```
-
+The code above produces a matrix of probabilities of the New England Patriots (rows of the matrix) and the Los Angeles Rams (matrix columns) scoring a specific number of points. For example, along the diagonal, both teams have the same number of points (e.g. P(0-0) = 1.290229e-13). We can calculate the odds of draw by summing all the diagonal entries. Everything below the diagonal represents a Patriots win (e.g P(8-0) = 3.198777e-09). Using matrix manipulation functions, we can perform these types of calculations to understand the chances of winning.
 
 ```R
 PatriotsVsRams <- SuperBowl_Simulate(NFL_Poisson, "New England Patriots", "Los Angeles Rams", MaxPoints=40)
-
 # Chances of a Patriots win
 sum(PatriotsVsRams[lower.tri(PatriotsVsRams)])
 ```
-
-
 0.391993996454314
-
-
 
 ```R
 # Chances of a Tie, though this is an impossibility for the Super Bowl
 sum(diag(PatriotsVsRams))
 ```
-
-
 0.0723591319608067
-
-
 
 ```R
 # Chances of a Rams win
 sum(PatriotsVsRams[upper.tri(PatriotsVsRams)])
 ```
-
-
 0.535646822597374
 
 
-# 6. Forecast Conclusions
-
+**Forecast Conclusions**
 * Our predictions indicate that the Super Bowl will be an extremely close game!!!
 * Even with the New England Patriots having the home team advantage (due to heavier fanbase predicted to be Super Bowl 53), they're projected to lose
-* **Our regression analysis and simulations favor the Los Angeles Rams narrowly leading with a final score of 15-14**
+* Our regression analysis and simulations favor the Los Angeles Rams narrowly leading with a final score of 15-14
 * The Rams have a 53.6% chance of winning.
 
 **Acknowledgements**
-
-This was my first time _ever_ using API tools, and definitely struggled with accessing Watson NLU's emotion dataframes via R. I based my initial code off of [Rafi Kurlansik](https://www.linkedin.com/in/raphaelkurlansik/)'s community post on [Retrieving Dataframes from Watson NLU](https://dataplatform.cloud.ibm.com/analytics/notebooks/03ed6b90-9167-4096-ac90-bb9b781c9e35/view?access_token=97a530d841a7e00a36a18ba4e3c2cfdba1a5b2372a782c1b4e89c29b212b4ba9). Let me tell you folks... Rafi went out of his way, way above and beyond, to help a stranger with his R and Watson NLU problems (and was responsive as hell). Rafi works for IBM's Hybrid Cloud team as a Data Science Specialist and turns out to be a really nice guy too. Thanks again for your help!
+The main idea for the game simulation came from one of David Sheehan's GitHub repos, [Predicting Futbol Results With Statistical Modelling](https://dashee87.github.io/data%20science/football/r/predicting-football-results-with-statistical-modelling/).
