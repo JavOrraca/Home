@@ -4,14 +4,12 @@ title: 'Super Bowl 53: Predictive Modeling'
 ---
 Two weeks ago, I entered a Super Bowl LIII predictive analytics competition with my classmate [Kaitlyn Drake](https://www.linkedin.com/in/kaitdrake/) to enhance our data analysis and processing skills via R. We ended up having a great time and walked away with some tools and machine learning models that can be applied to topics beyond sports analytics. I've been using Shiny, Plotly, and gganimate recently to make flat charts come to life, so this was a great opportunity to further explore interactive, web-based visualization tools. Kaitlyn was great because prior to this exercise, I knew very little about the NFL and football!
 
-We spent a lot of time exploring NFL data sets (by team, player, season, _you-name-it_), but ultimately, our regression model relied on four variables, with our decision tree utilizing more variables that were imputed from online NFL data sets. 
+We spent a significant amount of time exploring NFL data sets (by team, player, season, _you-name-it_), but ultimately, our regression model only relied on four variables, best suited for our simulation, with more variables considered for the J48 decision tree model. We built the decision tree in WEKA, so this post will only cover the regression modeling and game simulation aspects of our project executed with R. While we did not use all of the data wrangled in the below example codes, I figured it could be beneficial to just keep it here. If you can use it in the future, awesome.
 
 **Prerequisites**
-* [IBM Watson NLU Demo](https://natural-language-understanding-demo.ng.bluemix.net): If you've read this far and want to stop or don't feel you have the skills/tools to continue, this link lets you test drive Watson NLU via their demo, free for public use and no signup required
-* [IBMid](https://myibm.ibm.com): If you don't have an IBMid, sign up for one here
-* [IBM Cloud Lite Account](https://www.ibm.com/cloud/lite-account): You'll need an IBMid to sign up for a free Cloud Lite account, but this is a prerequisite for API access to Watson NLU
-* R notebook: I typically use [RStudio (desktop)](https://www.rstudio.com/) or [Jupyter Labs (web-based)](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906)
-* R packages: httr, jsonlite, xlsx (in my team's case, we collected our social data in Excel), reshape, dplyr, ggplot2
+* R notebook: I use [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) almost exclusively nowadays for projects like these, but if you're just starting out, [RStudio (desktop)](https://www.rstudio.com/) is a much better beginner platform in my opinion
+* R packages:
+  * dplyr, sqldf, fastDummies (for fast dummy variable building, i.e., the process of converting categorical variables to binary variables for more efficient modeling xlsx (in my team's case, we collected our social data in Excel), reshape, dplyr, ggplot2
 
 
 # Super Bowl 53: Final Score Predictions
