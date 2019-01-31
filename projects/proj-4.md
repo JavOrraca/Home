@@ -333,14 +333,14 @@ write.csv(NFL_by_Team, "NFL_by_Team.csv")
      $ ValuationChange5Yr    : num  2.15 2.31 1.73 1.71 1.84 ...
 
 **2. Exploration through Visualizations**
-Unfortunately, I'm having issues bringing in my Plotly and gganimate interactive plots and animations to this GitHub repo, but feel free to contact me via LinkedIn or email and I'll send you the interactive plots no problem. They're HTML files about 3-4MB each. For now, below are some static examples built with ggplot (and made interactive with plotly + gganimate).
+<br>Unfortunately, I'm having issues bringing in my Plotly and gganimate interactive plots and animations to this GitHub repo, but feel free to contact me via LinkedIn or email and I'll send you the interactive plots no problem. They're HTML files about 3-4MB each. For now, below are some static examples built with ggplot (and made interactive with plotly + gganimate).
 
 ![](https://raw.githubusercontent.com/JavOrraca/Home/gh-pages/assets/img/Plot1.png)
 
 ![](https://raw.githubusercontent.com/JavOrraca/Home/gh-pages/assets/img/Plot2.png)
 
 **3. Poisson Regression**
-The first thing we do is to create two data frames and row-bind them for running Poisson regressions, and we'll use the same data set later for calculating game simulation probabilities.
+<br>The first thing we do is to create two data frames and row-bind them for running Poisson regressions, and we'll use the same data set later for calculating game simulation probabilities.
 
 ```R
 NFL_Poisson <- rbind(
@@ -452,8 +452,7 @@ Below, we'll create additional regression models for consideration in our ensemb
 ```
 
 **4. Simulation Modeling**
-
-In order to predict the outcome of Super Bowl 53, one of the finalists would (or should) be assigned a home team advantage. Both Super Bowl 53 teams are playing away, however, the Los Angeles Rams do not have a wide-reaching fanbase and sports forecasters / ticket brokers are predicting that majority of the fanbase present at Super Bowl 53 to be Patriots fans. As such, we'll assign the Patriots with the home team advantage.
+<br>In order to predict the outcome of Super Bowl 53, one of the finalists would (or should) be assigned a home team advantage. Both Super Bowl 53 teams are playing away, however, the Los Angeles Rams do not have a wide-reaching fanbase and sports forecasters / ticket brokers are predicting that majority of the fanbase present at Super Bowl 53 to be Patriots fans. As such, we'll assign the Patriots with the home team advantage.
 
 We will pass the teams into NFL_Poisson and the model will return the expected average number of points for the team (we need to run it twice to calculate the expected average number of points for each team separately). Below is the code and results for how many points we expect the Los Angeles Rams and the New England Patriots to score, giving the home team advantage to the Patriots.
 
@@ -519,4 +518,4 @@ sum(PatriotsVsRams[upper.tri(PatriotsVsRams)])
 * The Rams have a 53.6% chance of winning.
 
 **Acknowledgements**
-The main idea for the game simulation came from one of David Sheehan's GitHub repos, [Predicting Futbol Results With Statistical Modelling](https://dashee87.github.io/data%20science/football/r/predicting-football-results-with-statistical-modelling/).
+<br>The main idea for the game simulation came from one of David Sheehan's GitHub repos, [Predicting Futbol Results With Statistical Modelling](https://dashee87.github.io/data%20science/football/r/predicting-football-results-with-statistical-modelling/).
