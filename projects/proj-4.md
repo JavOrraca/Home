@@ -4,32 +4,24 @@ title: 'Super Bowl 53: Predictive Modeling'
 ---
 Two weeks ago, I entered a Super Bowl LIII predictive analytics competition with my classmate [Kaitlyn Drake](https://www.linkedin.com/in/kaitdrake/) to enhance our data analysis and processing skills via R. We ended up having a great time and walked away with some tools and machine learning models that can be applied to topics beyond sports analytics. I've been using Shiny, Plotly, and gganimate recently to make flat charts come to life, so this was a great opportunity to further explore interactive, web-based visualization tools. Kaitlyn was great because prior to this exercise, I knew very little about the NFL and football!
 
-We spent a significant amount of time exploring NFL data sets (by team, player, season, _you-name-it_), but ultimately, our regression model only relied on four variables, best suited for our simulation, with more variables considered for the J48 decision tree model. We built the decision tree in WEKA, so this post will only cover the regression modeling and game simulation aspects of our project executed with R. While we did not use all of the data wrangled in the below example codes, I figured it could be beneficial to just keep it here. If you can use it in the future, awesome.
+We spent a significant amount of time exploring NFL data sets (by team, player, season, _you-name-it_), but ultimately, our regression model only relied on four variables, best suited for our simulation, with more variables considered for the J48 decision tree model. We built the decision tree in WEKA, so this post will only cover the data manipulation, regression modeling, and game simulation aspects of our project executed with R. We didn't use all of the data wrangled, and I won't be going into too much explanation about the data collection and manipulation, but I left the code in case it is helpful to somebody. If you can use it in the future, awesome.
 
 **Prerequisites**
 * R notebook: I use [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) almost exclusively nowadays for projects like these, but if you're just starting out, [RStudio (desktop)](https://www.rstudio.com/) is a much better beginner platform in my opinion
 * R packages:
   * dplyr, sqldf, fastDummies (this one is new to me, but worked great for fast conversions of categorical variables to binary variables), ggplot2, 
 
+**Overview & Process**
+1. Data Collection & Manipulation
+2. Exploration through Visualizations
+3. Poisson Regression
+4. Simulation Modeling
+5. Forecast Conclusions
 
-# Super Bowl 53: Final Score Predictions
-_**BANA 290: Applied Forecast Modeling**_
-<br/>_Kaitlyn Drake_
-<br/>_Javier Orraca_
-
-# Overview & Process
-1. Data Collection
-2. Data Manipulation
-3. Exploration through Visualizations
-4. Poisson Regression
-5. Simulation Modeling
-6. Forecast Conclusions
-
-# 1. Data Collection
-
+**1. Data Collection & Manipulation**
 
 ```R
-setwd("C:/Users/orrac/OneDrive/Documents/UCI Courses/2019.01_BANA 290_Predictive Modeling/NFL Data")
+setwd("C:/Users/[...]/")
 
 library(dplyr)
 
@@ -66,20 +58,6 @@ str(Teams_2018_Valuation_by_Year)
 str(Teams_Coach_Tenure)
 ```
 
-    Warning message:
-    "package 'dplyr' was built under R version 3.5.2"
-    Attaching package: 'dplyr'
-    
-    The following objects are masked from 'package:stats':
-    
-        filter, lag
-    
-    The following objects are masked from 'package:base':
-    
-        intersect, setdiff, setequal, union
-    
-    
-
     'data.frame':	532 obs. of  17 variables:
      $ Team                : chr  "Arizona Cardinals" "Arizona Cardinals" "Arizona Cardinals" "Arizona Cardinals" ...
      $ Opponent            : chr  "Washington Redskins" "Los Angeles Rams" "Chicago Bears" "Seattle Seahawks" ...
@@ -98,23 +76,22 @@ str(Teams_Coach_Tenure)
      $ Net_Yards           : int  -216 -295 -95 -68 -227 -143 -86 54 -70 -43 ...
      $ Net_Turnovers       : int  1 0 2 1 -5 0 4 2 2 2 ...
      $ Net_Score           : int  -18 -34 -2 -3 10 -10 -35 3 -12 -2 ...
+     
     'data.frame':	32 obs. of  3 variables:
      $ Team              : chr  "Los Angeles Rams" "Oakland Raiders" "Atlanta Falcons" "Los Angeles Chargers" ...
      $ Valuation2018inMil: int  29 15 20 11 8 10 14 16 17 18 ...
      $ ValuationChange5Yr: num  3.44 2.49 2.31 2.29 2.16 ...
+     
     'data.frame':	448 obs. of  3 variables:
      $ Team     : chr  "Arizona Cardinals" "Arizona Cardinals" "Arizona Cardinals" "Arizona Cardinals" ...
      $ Year     : int  2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 ...
      $ Valuation: int  673 789 888 914 935 919 901 922 961 1000 ...
+     
     'data.frame':	32 obs. of  3 variables:
      $ CoachName  : chr  " Bruce AriansÂ " " Dan QuinnÂ " " John HarbaughÂ " " Rex RyanÂ " ...
      $ Team       : chr  "Arizona Cardinals" "Atlanta Falcons" "Baltimore Ravens" "Buffalo Bills" ...
      $ CoachTenure: int  6 4 11 4 8 4 16 3 9 4 ...
     
-
-# 2. Data Manipulation
-
-
 ```R
 # Left join Teams_2018_Stats and valuation data frames by Team
 NFL_Trim <- left_join(Teams_2018_Stats, Teams_2018_Valuation, by=c("Team" = "Team"))
@@ -138,10 +115,6 @@ NFL_Trim$GameWon <- as.integer(ifelse(NFL_Trim$Net_Score > 0, 1, 0))
 
 str(NFL_Trim)
 ```
-
-    Warning message:
-    "package 'fastDummies' was built under R version 3.5.2"
-
     'data.frame':	532 obs. of  24 variables:
      $ Team                : chr  "Arizona Cardinals" "Arizona Cardinals" "Arizona Cardinals" "Arizona Cardinals" ...
      $ Opponent            : chr  "Washington Redskins" "Los Angeles Rams" "Chicago Bears" "Seattle Seahawks" ...
@@ -168,17 +141,15 @@ str(NFL_Trim)
      $ GameTie             : int  0 0 0 0 0 0 0 0 0 0 ...
      $ GameWon             : int  0 0 0 0 1 0 0 1 0 0 ...
     
-
-
 ```R
 # Make new columns for later use in Poisson regression and simulations
+
 NFL_Trim$Home <- ifelse(NFL_Trim$GameLocation=="HOME", 1, 0)
 NFL_Trim$Away <- ifelse(NFL_Trim$GameLocation=="AWAY", 1, 0)
 NFL_Trim$HomeGoals <- ifelse(NFL_Trim$Home==1, NFL_Trim$Team_Score, 0)
 NFL_Trim$AwayGoals <- ifelse(NFL_Trim$Away==1, NFL_Trim$Team_Score, 0)
 str(NFL_Trim)
 ```
-
     'data.frame':	532 obs. of  28 variables:
      $ Team                : chr  "Arizona Cardinals" "Arizona Cardinals" "Arizona Cardinals" "Arizona Cardinals" ...
      $ Opponent            : chr  "Washington Redskins" "Los Angeles Rams" "Chicago Bears" "Seattle Seahawks" ...
@@ -209,8 +180,6 @@ str(NFL_Trim)
      $ HomeGoals           : num  6 0 14 17 0 0 10 18 0 21 ...
      $ AwayGoals           : num  0 0 0 0 28 17 0 0 14 0 ...
     
-
-
 ```R
 # Run SQL queries for summarizing conditional sum / mean metrics by team
 library(sqldf)
@@ -227,30 +196,11 @@ NFL_ConditionalTbl <- NFL_ConditionalTbl[,c(1,2,5,8,3,6,9,4,7,10)]
 # Since SF 49ers won no games away, clean up NAs
 NFL_ConditionalTbl[is.na(NFL_ConditionalTbl)] <- 0
 
-# Re-load dplyr in case of potential plyr function overrides
+# Re-load dplyr in case any plyr function masked dplyr functions
 library(dplyr)
 
 str(NFL_ConditionalTbl)
 ```
-
-    Loading required package: gsubfn
-    Loading required package: proto
-    Loading required package: RSQLite
-    ------------------------------------------------------------------------------
-    You have loaded plyr after dplyr - this is likely to cause problems.
-    If you need functions from both plyr and dplyr, please load plyr first, then dplyr:
-    library(plyr); library(dplyr)
-    ------------------------------------------------------------------------------
-    
-    Attaching package: 'plyr'
-    
-    The following objects are masked from 'package:dplyr':
-    
-        arrange, count, desc, failwith, id, mutate, rename, summarise,
-        summarize
-    
-    
-
     'data.frame':	32 obs. of  10 variables:
      $ Team                  : chr  "Arizona Cardinals" "Atlanta Falcons" "Baltimore Ravens" "Buffalo Bills" ...
      $ PointsAvgWhenWon      : num  22 32 27.3 26.8 30.3 ...
@@ -262,8 +212,6 @@ str(NFL_ConditionalTbl)
      $ YardsAvgNetWhenWon    : num  -61 36.3 156.6 67.2 33.7 ...
      $ YardsAvgNetWhenAway   : num  -160.6 29.4 85.5 -20.4 25.6 ...
      $ YardsAvgNetWhenWonAway: num  -118.5 57.3 205 126 54.5 ...
-    
-
 
 ```R
 # Summarize average metrics by team
@@ -297,7 +245,6 @@ NFL_by_Team <- as.data.frame(NFL_by_Team)
 NFL_by_Team <- NFL_by_Team[,c(1:5,7,6,18:20,8:11,21:23,12:13,24:26,14:17)]
 str(NFL_by_Team)
 ```
-
     'data.frame':	32 obs. of  26 variables:
      $ Team                  : chr  "Arizona Cardinals" "Atlanta Falcons" "Baltimore Ravens" "Buffalo Bills" ...
      $ GamesTotal            : num  16 16 17 16 16 17 16 16 18 16 ...
@@ -326,11 +273,9 @@ str(NFL_by_Team)
      $ Valuation2018         : num  10 20 19 1 12 26 3 4 32 22 ...
      $ ValuationChange5Yr    : num  2.15 2.31 1.73 1.71 1.84 ...
     
-
-
 ```R
 # Normalized totals for Saints and Chiefs to reflect 16 vs 17 games, and
-# adjusted Patriots and Rams to reflect 16 vs 18 games. Created new fields.
+# adjusted Patriots and Rams to reflect 16 vs 18 games -> Created new fields.
 
 NFL_by_Team <- NFL_by_Team %>%
     mutate(
@@ -353,7 +298,6 @@ str(NFL_by_Team)
 # Save data frame as csv file, if needed
 write.csv(NFL_by_Team, "NFL_by_Team.csv")
 ```
-
     'data.frame':	32 obs. of  32 variables:
      $ Team                  : chr  "Arizona Cardinals" "Atlanta Falcons" "Baltimore Ravens" "Buffalo Bills" ...
      $ GamesTotal            : num  16 16 17 16 16 17 16 16 18 16 ...
@@ -387,19 +331,16 @@ write.csv(NFL_by_Team, "NFL_by_Team.csv")
      $ TurnoversAvg          : num  1.75 1.12 1.35 2 1.38 ...
      $ Valuation2018         : num  10 20 19 1 12 26 3 4 32 22 ...
      $ ValuationChange5Yr    : num  2.15 2.31 1.73 1.71 1.84 ...
-    
 
-**3. Exploration through Visualizations**
-Unfortunately, I'm having issues bringing in my Plotly and gganimate interactive plots and animations to this GitHub post, but feel free to contact me via LinkedIn or email and I'll get those HTML files to you. For now, below are some static examples built with ggplot (and made interactive with plotly + gganimate).
+**2. Exploration through Visualizations**
+Unfortunately, I'm having issues bringing in my Plotly and gganimate interactive plots and animations to this GitHub repo, but feel free to contact me via LinkedIn or email and I'll send you the interactive plots no problem. They're HTML files about 3-4MB each. For now, below are some static examples built with ggplot (and made interactive with plotly + gganimate).
 
 ![](https://raw.githubusercontent.com/JavOrraca/Home/gh-pages/assets/img/Plot1.png)
 
 ![](https://raw.githubusercontent.com/JavOrraca/Home/gh-pages/assets/img/Plot2.png)
 
-<video src="https://raw.githubusercontent.com/JavOrraca/Home/gh-pages/assets/img/NFL_Valuation_Animation.mp4" width="640" height="480" controls preload></video>
-
-**4. Poisson Regression**
-The first thing we do is to create two data frames and row-bind them for running Poisson regressions and later for calculating game simulation probabilities.
+**3. Poisson Regression**
+The first thing we do is to create two data frames and row-bind them for running Poisson regressions, and we'll use the same data set later for calculating game simulation probabilities.
 
 ```R
 NFL_Poisson <- rbind(
@@ -506,12 +447,11 @@ The Los Angeles Rams have a Team estimate coefficient of 0.601312, while the New
 
 Below, we'll create additional regression models for consideration in our ensemble model.
 
-
 ```R
 # Additional 
 ```
 
-**5. Simulation Modeling**
+**4. Simulation Modeling**
 
 In order to predict the outcome of Super Bowl 53, one of the finalists would (or should) be assigned a home team advantage. Both Super Bowl 53 teams are playing away, however, the Los Angeles Rams do not have a wide-reaching fanbase and sports forecasters / ticket brokers are predicting that majority of the fanbase present at Super Bowl 53 to be Patriots fans. As such, we'll assign the Patriots with the home team advantage.
 
@@ -572,7 +512,7 @@ sum(PatriotsVsRams[upper.tri(PatriotsVsRams)])
 0.535646822597374
 
 
-**6. Forecast Conclusions**
+**5. Forecast Conclusions**
 * Our predictions indicate that the Super Bowl will be an extremely close game!!!
 * Even with the New England Patriots having the home team advantage (due to heavier fanbase predicted to be Super Bowl 53), they're projected to lose
 * Our regression analysis and simulations favor the Los Angeles Rams narrowly leading with a final score of 15-14
