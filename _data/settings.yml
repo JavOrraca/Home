@@ -43,7 +43,7 @@ projects:
 - {name: 'Super Bowl 53: Predictive Modeling for Final Scores', folder: 'proj-4', file: 'projects/proj-4.html'}
 - {name: 'IBM Watson NLU via R', folder: 'proj-3', file: 'projects/proj-3.html'}
 - {name: 'Unsupervised Machine Learning: Part 1/2 (Clustering)', folder: 'proj-1', file: 'projects/proj-1.html'}
-- {name: 'Unsupervised Machine Learning: Part 2/2 (Clustering done... Now what?!?)', folder: 'proj-2', file: 'projects/proj-2.html'}
+#- {name: 'Unsupervised Machine Learning: Part 2/2 (Clustering done... Now what?!?)', folder: 'proj-2', file: 'projects/proj-2.html'}
 #- {name: 'Project Five', folder: 'proj-5', file: 'projects/proj-5.html'}
 
 #-------------------------------
