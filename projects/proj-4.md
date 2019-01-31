@@ -390,7 +390,12 @@ write.csv(NFL_by_Team, "NFL_by_Team.csv")
     
 
 **3. Exploration through Visualizations**
-Unfortunately, I'm having issues bringing in my Plotly and gganimate interactive plots and animations to this GitHub post, but feel free to contact me via LinkedIn or email and I'll get those HTML files to you. For now, below are some static charts built with ggplot + plotly + gganimate.  
+Unfortunately, I'm having issues bringing in my Plotly and gganimate interactive plots and animations to this GitHub post, but feel free to contact me via LinkedIn or email and I'll get those HTML files to you. For now, below are some static examples built with ggplot (and made interactive with plotly + gganimate).
+
+[](https://raw.githubusercontent.com/JavOrraca/Home/gh-pages/assets/img/Plot1.png)
+[](https://raw.githubusercontent.com/JavOrraca/Home/gh-pages/assets/img/Plot1.png)
+
+<video src="https://raw.githubusercontent.com/JavOrraca/Home/gh-pages/assets/img/NFL_Valuation_Animation.mp4" width="640" height="480" controls preload></video>
 
 **4. Poisson Regression**
 The first thing we do is to create two data frames and row-bind them for running Poisson regressions and later for calculating game simulation probabilities.
