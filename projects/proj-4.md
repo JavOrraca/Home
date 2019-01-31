@@ -2,10 +2,9 @@
 layout: post
 title: 'Super Bowl 53: Predictive Modeling'
 ---
-To gain more repetitions analyzing data via R, developing regression and ML models, and exploring interactive visualizations, I entered a Super Bowl LIII predictive analytics competition with my classmate [Kaitlyn Drake](https://www.linkedin.com/in/kaitdrake/). She was knowledgable about the NFL and helped me go from zero NFL knowledge to knowing more than I'll ever need!
+Two weeks ago, I entered a Super Bowl LIII predictive analytics competition with my classmate [Kaitlyn Drake](https://www.linkedin.com/in/kaitdrake/) to enhance our data analysis and processing skills via R. We ended up having a great time and walked away with some tools and machine learning models that can be applied to topics beyond sports analytics. I've been using Shiny, Plotly, and gganimate recently to make flat charts come to life, so this was a great opportunity to further explore interactive, web-based visualization tools. Kaitlyn was great because prior to this exercise, I knew very little about the NFL and football!
 
-FIX BELOW CODE ASAP
-
+We spent a lot of time exploring NFL data sets (by team, player, season, _you-name-it_), but ultimately, our regression model relied on four variables, with our decision tree utilizing more variables that were imputed from online NFL data sets. 
 
 **Prerequisites**
 * [IBM Watson NLU Demo](https://natural-language-understanding-demo.ng.bluemix.net): If you've read this far and want to stop or don't feel you have the skills/tools to continue, this link lets you test drive Watson NLU via their demo, free for public use and no signup required
