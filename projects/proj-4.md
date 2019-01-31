@@ -2,7 +2,10 @@
 layout: post
 title: 'Super Bowl 53: Predictive Modeling'
 ---
-dsdadsadsadsad
+To gain more repetitions analyzing data via R, developing regression and ML models, and exploring interactive visualizations, I entered a Super Bowl LIII predictive analytics competition with my classmate [Kaitlyn Drake](https://www.linkedin.com/in/kaitdrake/). She was knowledgable about the NFL and helped me go from zero NFL knowledge to knowing more than I'll ever need!
+
+FIX BELOW CODE ASAP
+
 
 **Prerequisites**
 * [IBM Watson NLU Demo](https://natural-language-understanding-demo.ng.bluemix.net): If you've read this far and want to stop or don't feel you have the skills/tools to continue, this link lets you test drive Watson NLU via their demo, free for public use and no signup required
