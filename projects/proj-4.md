@@ -6,7 +6,7 @@ Two weeks ago, I entered a Super Bowl LIII predictive analytics competition with
 
 We spent a significant amount of time exploring NFL data sets (by team, player, season, _you-name-it_), but ultimately, our regression model only relied on four variables, best suited for our simulation, with more variables considered for the J48 decision tree model. We built the decision tree in WEKA, so this post will only cover the data manipulation, regression modeling, and game simulation aspects of our project executed with R. We didn't use all of the data wrangled, and I won't be going into too much explanation about the data collection and manipulation, but I left the code in case it is helpful to somebody. If you can use it in the future, awesome.
 
-I'll just be covering our overall process below, but please find the GitHub repository with data sources and R code here: [](https://github.com/JavOrraca/NFLSuperBowlPrediction) 
+I'll just be covering our overall process below, but please find the GitHub repository with data sources and R code here: [https://github.com/JavOrraca/NFLSuperBowlPrediction](https://github.com/JavOrraca/NFLSuperBowlPrediction)
 
 **Prerequisites**
 * R notebook: I used [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) and the repo contains the Jupyter Notebook .ipynb file
