@@ -8,3 +8,5 @@ If you're interested in data science, machine learning, and adding business valu
 Every week has been exciting and challenging, but I have learned _SO MUCH_ in just two quarters including statistics, data science concepts, programming, marketing analytics, visualizations, linear and non-linear programming for simulation and optimization modeling, etc. You'll learn to _REALLY_ learn again and it feels so great to grow in this way. Check out the student profile in the below and if you're interested in a program like UCI's MSBA, feel free to contact me with any questions. I'll give you my objective perspective of the good and the bad (but mostly good!).
 
 Source: [Javier Orraca's MSBA '19 Student Profile](https://merage.uci.edu/programs/masters/master-science-business-analytics/curriculum.html)
+
+![](https://raw.githubusercontent.com/JavOrraca/Home/gh-pages/assets/img/UCI_Student_Profile.jpg)
