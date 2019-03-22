@@ -8,5 +8,7 @@ Two weeks ago, I knew nothing about the NFL (despite my passion for fútbol!). I
 This was my first public speaking opportunity on analytics and simulation modeling... Had a great time! 
 
 Sources:
-[NFL prediction overview](GET LINK)
-[GitHub Repo](GET LINK)
+[Super Bowl Prediction Modeling project](GET LINK)
+[GitHub repo - Dataset and full code](GET LINK)
+
+![](https://raw.githubusercontent.com/JavOrraca/Home/gh-pages/assets/img/Orraca_AnalyticsAndR.jpg)
