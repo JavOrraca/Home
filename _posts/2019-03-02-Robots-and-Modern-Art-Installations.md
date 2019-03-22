@@ -3,7 +3,7 @@ layout: post
 title: "Robots and Modern Art Installations"
 ---
 
-{% include googleDrivePlayer.html id=page.1LHi0zud5NTAFTkyd9CFxmaRBYHMkRCPf %}
+![](https://raw.githubusercontent.com/JavOrraca/Home/gh-pages/assets/img/Telestron.png)
 
 If you’re based in SoCal, I highly recommend a visit to the Telestron installation (Feb 23 - March 28). This is an immersive, futuristic light show put on by VTProDesign and GMUNK. I love the intersection of art+technology and these robots do not disappoint!
 
