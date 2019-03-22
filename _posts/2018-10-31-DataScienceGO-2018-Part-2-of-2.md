@@ -9,7 +9,7 @@ Now that I've had a few weeks to digest my experience at DataScienceGO 2018, def
 
 Send me a note here or on LinkedIn if you have any questions or check out my [Resources](https://javorraca.github.io/Home/pages/resources.html) page now updated with some of the items below:
 
-[**Nadieh Bremer**](https://www.linkedin.com/in/nbremer/): Data visualization designer that was the first presenter at DSGO... The conference couldn't have started with a better presenter. She blew away the crowd showcasing some of the freelancing work she does.
+[**Nadieh Bremer**](https://www.linkedin.com/in/nbremer/): Data visualization designer that was the first presenter at DSGO... The conference couldn't have started with a better presenter. She blew away the crowd showcasing some of the freelancing work she does (the image above is something she designed for Scientific American!).
 * [Visual Cinnamon](https://www.visualcinnamon.com/): Nadieh's data visualization portfolio is a work of art, and data storytelling was made to look this way. She uses D3 and JavaScript to make unique, beautifully designed interactive visualizations on the web.
 * _**Takeaway**_: "Remix what's out there already" <-- This is so true... If you have a programming or visualization idea, do the smart thing and Google it first... Much more time-efficient to start with similar code than to start from scratch.
 
