@@ -18,7 +18,7 @@ Given my prior career niche within the Finance world (i.e., financial forecastin
 I stress this a lot, but try to enjoy your interview experience... Nerves can be a beast (I still get the jitters before I'm interviewed), but be yourself, be friendly, and be inquisitive. I was always bored out of my mind with overly stiff candidates (granted, I recognize that nerves could have played a role). Long-winded 90- to 120-second introductions also irked me... it just sounds over-the-top and too scripted.
 
 Two last tips:
-1) As you're nearing the end of interviews with a company, don't be intimidated by titles if you're asked to interview with a Director, Partner, VP of Artificial Intelligence, or CEO... this just means more experience, more time, and many more repetitions than you. They're (mostly!) normal people with normal hobbies, they like the same books and TV shows as you, they drink the same booze as you, and they have families, just like you.
-2) Don't forget to send thank you emails to your interviewers (personalized thank you emails are even better)... This still stands out as very impressive, even if it is perceived as "old school."
+1 As you're nearing the end of interviews with a company, don't be intimidated by titles if you're asked to interview with a Director, Partner, VP of Artificial Intelligence, or CEO... this just means more experience, more time, and many more repetitions than you. They're (mostly!) normal people with normal hobbies, they like the same books and TV shows as you, they drink the same booze as you, and they have families, just like you.
+2 Don't forget to send thank you emails to your interviewers (personalized thank you emails are even better)... This still stands out as very impressive, even if it is perceived as "old school."
 
 Source: [LinkedIn Article published by Javier Orraca](https://www.linkedin.com/pulse/interview-tips-students-job-seekers-javier-orraca/)
