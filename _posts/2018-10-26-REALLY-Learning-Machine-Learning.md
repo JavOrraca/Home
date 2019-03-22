@@ -1,7 +1,9 @@
 ---
 layout: post
-title: "Learning Machine Learning, by Hand"
+title: "Learning Machine Learning by Hand"
 ---
+
+![](https://raw.githubusercontent.com/JavOrraca/Home/gh-pages/assets/img/naive_bayes.png)
 
 Machine learning via R, Python, (enter your tool of choice here)... Not bad. But doing machine learning by hand, wow... This is a true study of patience!
 
