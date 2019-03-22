@@ -3,6 +3,8 @@ layout: post
 title: "New Book Recommendations on Analytics & Data Science"
 ---
 
+![](https://raw.githubusercontent.com/JavOrraca/Home/gh-pages/assets/img/Books.jpg)
+
 Back to school, back to reading! Looking forward to these reads... I’m finding Naomi Ceder’s The Quick Python Book really helpful for learning Python 3... definitely a learn-by-doing style that I like. Links to these books below:
 
 Amazon Book Links:
@@ -15,5 +17,3 @@ Amazon Book Links:
 * [Applied Predictive Analytics](https://www.amazon.com/Applied-Predictive-Analytics-Dean-Abbott/dp/1118727967/ref=sr_1_1?crid=NMRPT6BR2NLS&keywords=applied+predictive+analytics&qid=1553226294&s=gateway&sprefix=applied+predict%2Caps%2C227&sr=8-1)
 * [Learning Tableau 10](https://www.amazon.com/Learning-Tableau-10-Intelligence-visualization/dp/178646635X/ref=sr_1_3?crid=1WAYW623ZLKD7&keywords=learning+tableau+10&qid=1553226313&s=gateway&sprefix=learning+tablea%2Caps%2C214&sr=8-3)
 * [Data Smart: Using Data Science to Transform Information into Insight](https://www.amazon.com/Data-Smart-Science-Transform-Information/dp/111866146X/ref=sr_1_1?keywords=data+smart&qid=1553226341&s=gateway&sr=8-1)
-
-![](https://raw.githubusercontent.com/JavOrraca/Home/gh-pages/assets/img/Books.jpg)
