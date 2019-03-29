@@ -2,14 +2,12 @@
 layout: post
 title: 'Super Bowl 53: Predictive Modeling'
 ---
-Two weeks ago, I entered a Super Bowl LIII predictive analytics competition with my classmate [Kaitlyn Drake](https://www.linkedin.com/in/kaitdrake/) to enhance our data analysis and processing skills via R. We ended up having a great time and walked away with some tools and machine learning models that can be applied to topics beyond sports analytics. I've been using Shiny, Plotly, and gganimate recently to make flat charts come to life, so this was a great opportunity to further explore interactive, web-based visualization tools. Kaitlyn was great because prior to this exercise, I knew very little about the NFL and football!
+Two weeks ago, I entered a Super Bowl LIII predictive analytics competition with my classmate [Kaitlyn Drake](https://www.linkedin.com/in/kaitdrake/) to enhance our data analysis and processing skills via R. We had a great time and walked away with some tools and machine learning models that can be applied to topics beyond sports analytics. I've recently been exploring Shiny, Plotly, and gganimate to make plots come to life, so this was also a great opportunity to produce web-based, interactive visualizations. Kaitlyn was great because prior to this exercise, I knew very little about the NFL and football!
 
-We spent a significant amount of time exploring NFL data sets (by team, player, season, _you-name-it_), but ultimately, our regression model only relied on four variables, best suited for our simulation, with more variables considered for the J48 decision tree model. We built the decision tree in WEKA, so this post will only cover the data manipulation, regression modeling, and game simulation aspects of our project executed with R. We didn't use all of the data wrangled, and I won't be going into too much explanation about the data collection and manipulation, but I left the code in case it is helpful to somebody. If you can use it in the future, awesome.
-
-I'll just be covering our overall process below, but please find the GitHub repository with data sources and R code here: [https://github.com/JavOrraca/NFLSuperBowlPrediction](https://github.com/JavOrraca/NFLSuperBowlPrediction)
+We spent a significant amount of time exploring NFL data sets (by team, player, season, etc.), but ultimately, our Poisson regression models relied on four variables (best suited for our game simulations). More variables were considered for our J48 decision tree model. Kaitlyn built the decision tree in WEKA, so this post will only cover the data manipulation, regression modeling, and game simulation aspects of our project executed via R. We didn't use all of the data wrangled, and I won't be going into too much explanation about the data collection and manipulation in this project overview... I created another GitHub repository with all of the data sources and full R code if you want to replicate our analysis: [https://github.com/JavOrraca/NFLSuperBowlPrediction](https://github.com/JavOrraca/NFLSuperBowlPrediction)
 
 **Prerequisites**
-* R notebook: I used [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) and the repo contains the Jupyter Notebook .ipynb file
+* R notebook: I used [Jupyter Lab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) and the repo contains my Jupyter Notebook .ipynb file
 * R packages relied upon: dplyr, sqldf, fastDummies (this one is new to me, but worked great for fast conversion of categorical to binary variables), ggplot2, plotly, and gganimate
 
 **Overview & Process**
@@ -63,7 +61,7 @@ str(Teams_Coach_Tenure)
      $ Team       : chr  "Arizona Cardinals" "Atlanta Falcons" "Baltimore Ravens" "Buffalo Bills" ...
      $ CoachTenure: int  6 4 11 4 8 4 16 3 9 4 ...
 
-Next, we'll utilize the fastDummies package to create dummy variables for Teams. Note: The first dummy variable for Team and Opponent can be removed to avoid multicollinearity by including final criteria in dummy_cols function as "remove_first_dummy = TRUE". Sample code below:
+The fastDummies package was used to create dummy variables for Teams. Note: The first dummy variable for Team and Opponent can be removed to avoid multicollinearity by including final criteria in the dummy_cols function as "remove_first_dummy = TRUE". Sample code below:
 
 ```R
 library(fastDummies)
@@ -139,7 +137,7 @@ str(NFL_Trim)
      $ HomeGoals           : num  6 0 14 17 0 0 10 18 0 21 ...
      $ AwayGoals           : num  0 0 0 0 28 17 0 0 14 0 ...
     
-I've used SQL more in the last 6 months than I did over 12 years in my valuation and financial modeling career. Microsoft Access and Excel had been more than sufficient for my data joining, sanitation, group by's, and manipulation, but more and more I find SQL a requirement for fast wrangling (I used R's sqldf package), example below:
+I then used the sqldf package to run SQL functions within the R environment, see below:
 
 ```R
 library(sqldf)
@@ -237,14 +235,14 @@ str(NFL_by_Team)
      $ ValuationChange5Yr    : num  2.15 2.31 1.73 1.71 1.84 ...
     
 **2. Exploration through Visualizations**
-<br>Unfortunately, I'm having issues incorporating the Plotly and gganimate interactive plots / animations to this markdown file, but refer to my [Super Bowl GitHub repo](https://github.com/JavOrraca/NFLSuperBowlPrediction) to see code and you can also download the interactive plots as HTML files. Here are some static examples of ggplot2 + plotly charts:
+<br>I'm having issues incorporating the Plotly and gganimate interactive plots / animations to this Markdown script, but on the full GitHub repo you can find the [interactive plots as HTML files](https://github.com/JavOrraca/NFLSuperBowlPrediction/tree/master/Sample%20Visualizations). Here are some static examples of ggplot2 + plotly charts:
 
 ![](https://raw.githubusercontent.com/JavOrraca/Home/gh-pages/assets/img/Plot1.png)
 
 ![](https://raw.githubusercontent.com/JavOrraca/Home/gh-pages/assets/img/Plot2.png)
 
 **3. Poisson Regression**
-<br>Likely the _**most important**_ data frame is created below, row-binding two data frames then run through a link=log Poisson glm regression. We'll also use the below to run our game simulations.
+<br>The most important step in our analysis includes creating a new data frame (via row-binding of two data frames) and then running the data through a Poisson regression (link-log Poisson glm).
 
 ```R
 NFL_Poisson <- rbind(
@@ -259,12 +257,12 @@ NFL_Poisson <- rbind(
 glm(Points ~ Home + Team + Opponent, family=poisson(link=log), data=.)
 summary(NFL_Poisson)
 ```
-Similar to logistic regression, we exponentiate the parameter Estimate values. A positive Estimate value from the regression output implies more points (e<sup>x</sup>>1∀x>0), while values closer to zero represent more neutral effects (e<sup>0</sup>=1). The Home variable has an Estimate of 0.094649. Historically when predicing NFL scores, Home would have captured the fact that home teams generally score more points than away teams. However, as we take the exponent of the Estimate coefficient for Home, home teams were only 9.9% (e<sup>0.094649</sup>=1.099) more likely to score.
+Similar to logistic regression, we need to exponentiate the parameter Estimate values to make sense of the output. A positive Estimate value from the regression output implies more points (e<sup>x</sup>>1∀x>0), while values closer to zero represent more neutral effects (e<sup>0</sup>=1). The Home variable has an Estimate of 0.094649. Historically when predicing NFL scores, Home would have captured the fact that home teams generally score more points than away teams. However, in exponentiating the Estimate coefficient for Home, the 2018 NFL data indicates that home teams were only 9.9% more likely to score (e<sup>0.094649</sup>=1.099).
 
 The Los Angeles Rams have a Team estimate coefficient of 0.601312, while the New England Patriots have a 0.389060. This indicates that the Los Angeles Rams are generally better scorers than the "average" NFL team (and well... the New England Patriots are _also_ better scorers than the average NFL team, but _not as good of scorers_ as the Los Angeles Rams). The Opponent values penalize and reward teams based on the quality of their opposition. This mimics the defensive strength of each team (Los Angeles Rams: 0.128184; New England Patriots: 0.077337). In this case, you are less likely to score against the New England Patriots.
 
 **4. Simulation Modeling**
-<br>In order to predict the outcome of Super Bowl 53, one of the finalists would (or should) be assigned a home team advantage. Both Super Bowl 53 teams are playing away, however, the Los Angeles Rams do not have a wide-reaching fanbase and sports forecasters / ticket brokers are predicting that majority of the fanbase present at Super Bowl 53 to be Patriots fans. As such, we'll assign the Patriots with the home team advantage.
+<br>To predict the likelihood of the outcome of our Super Bowl 53 prediction, one of the finalists would (or should) be assigned a home team advantage. While both Super Bowl 53 teams are playing away, the Los Angeles Rams do not have as wide-reaching of a fanbase as the Patriots, and sports forecasters / ticket brokers are predicting that the majority of the fanbase present at Super Bowl 53 will be Patriots fans. As such, we'll assign the Patriots with the home team advantage.
 
 We will pass the teams into the NFL_Poisson regression model and the output returns the expected average number of points for the team (we need to run it twice to calculate the expected average number of points for each team separately). Below is the code and results for how many points we expect the Los Angeles Rams and the New England Patriots to score, giving the home team advantage to the Patriots.
 
@@ -328,4 +326,4 @@ sum(PatriotsVsRams[upper.tri(PatriotsVsRams)])
 * The Rams have a 53.6% chance of winning based on the game simulation output
 
 **Acknowledgements**
-<br>The main idea for the game simulation came from one of David Sheehan's GitHub repos, [Predicting Futbol Results With Statistical Modelling](https://dashee87.github.io/data%20science/football/r/predicting-football-results-with-statistical-modelling/).
+<br>Our game simulation method was derived from one of David Sheehan's GitHub repos, [Predicting Futbol Results With Statistical Modelling](https://dashee87.github.io/data%20science/football/r/predicting-football-results-with-statistical-modelling/).
