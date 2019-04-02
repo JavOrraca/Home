@@ -9,7 +9,7 @@ Below is a list of  resources to introduce you to the world of data analytics, d
 
 **Online Educational Resources**
 
-* [Udemy](https://www.udemy.com/topic/data-science/): Recently, Udemy seems to be a powerhouse for data science educational material and I've now bought several Udemy classes to reinforce the programming and analytics training that I received through my UCI masters program. I've taken some Python machine learning classes, and really enjoyed _Spark and Python for Bid Data with PySpark_ 
+* [Udemy](https://www.udemy.com/topic/data-science/): Recently, Udemy seems to be a powerhouse for data science educational material and I've now bought several Udemy classes to reinforce the programming and analytics training that I received through my UCI masters program. I've taken some Python machine learning classes, and really enjoyed _Spark and Python for Big Data with PySpark_ 
 * [Codecademy](https://www.codecademy.com/): This is one of the best interactive learning platforms that I've used - Codecademy offers free (and for pay) coding classes in several programming languages including Python, Java, JavaScript, SQL, and more
 * [Kaggle](https://www.kaggle.com/): World's largest community of data scientists and machine learners, with discussion boards, downloadable datasets, and competitions to reinforce your programming skills with R, Python, etc.
 * [Khan Academy](https://www.khanacademy.org/math/statistics-probability): Statistics is critical for any data scientist, and the Khan Academy statistics and probability lessons will provide you with the basics
