@@ -3,6 +3,8 @@ layout: post
 title: "Resources"
 ---
 
+_Updated: April 2019_
+
 Below is a list of data science resources to introduce you to the world of data analytics, data science, and programming. I'll update periodically as I learn of new resources and tools. R, Python, and SQL are programming languages used for data collection, data manipulation, data analytics, statistical analysis, web scraping, machine learning, and artificial intelligence. If you have any suggestions or questions, please contact me via LinkedIn or email, thanks.
 
 **Online Educational Resources**
@@ -49,7 +51,7 @@ Outside of the classroom, podcasts help me stay current with data science news a
 ![alt text](http://felixfan.github.io/figure/ggplot2-Cheatsheet-20.png "Grouping multiple plots via ggplot2")
 
 **Python: The Basics**
-_Many online Python trainings were made when Python 2.x was standard. Python 3.x is the future of the language, so don't bother installing Python 2.x (syntax between the two is very similar). Ping me if you need help._    
+_Many online Python trainings were made when Python 2.x was standard. Python 3.x is the future of the language, so don't bother installing or learning Python 2.x._    
 
 * [PyCharm](https://www.jetbrains.com/pycharm/): A plethora of Python IDEs exist, PyCharm just happens to be my Python desktop IDE of choice
   * The full version is $89 USD for individual users, but if you're an active student, you can download the entire suite for free.
