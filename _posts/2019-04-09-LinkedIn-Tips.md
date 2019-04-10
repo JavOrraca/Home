@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "LinkedIn Mobile - Personalized Requests"
+title: "LinkedIn Personalized Requests on Mobile App"
 ---
 
 ![](https://raw.githubusercontent.com/JavOrraca/Home/gh-pages/assets/img/LinkedIn_Logo.png)
