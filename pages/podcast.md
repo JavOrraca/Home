@@ -10,4 +10,4 @@ title: "Scatter Data Podcast"
 <br>
 <br>
 <br>
-[_Scatter Podcast on SoundCloud_](https://soundcloud.com/scatterpodcast)
+Scatter Podcast is available on [SoundCloud](https://soundcloud.com/scatterpodcast), [iTunes & Apple Podcasts](https://podcasts.apple.com/us/podcast/scatter-podcast/id1458544194), [Spotify](https://open.spotify.com/show/64UpJwByrdsrLSYObuEeHx?si=n_UlBzrYQv6ptBjeXfSOsw), [TuneIn](https://tunein.com/podcasts/Business--Economics-Podcasts/Scatter-Podcast-p1216105/), and Stitcher (_application pending_).
