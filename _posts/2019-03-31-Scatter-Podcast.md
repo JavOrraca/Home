@@ -20,6 +20,7 @@ I plan to release one episode weekly - Look out for upcoming interviews with dat
 Scatter Podcast, currently available on the following major platforms:
 * [SoundCloud](https://soundcloud.com/scatterpodcast)
 * [Apple iTunes & Podcasts](https://podcasts.apple.com/us/podcast/scatter-podcast/id1458544194)
-* [TuneIn](https://tunein.com/podcasts/Business--Economics-Podcasts/Scatter-Podcast-p1216105/)
 * [Spotify](https://open.spotify.com/show/64UpJwByrdsrLSYObuEeHx?si=n_UlBzrYQv6ptBjeXfSOsw)
-* Stitcher Radio (_Approval Pending_)
+* [TuneIn](https://tunein.com/podcasts/Business--Economics-Podcasts/Scatter-Podcast-p1216105/)
+* [Stitcher Radio](https://www.stitcher.com/podcast/scatter-podcast/httpssoundcloudcomscatterpodcast)
+* [Google Play Music](https://playmusic.app.goo.gl/?ibi=com.google.PlayMusic&isi=691797987&ius=googleplaymusic&apn=com.google.android.music&link=https://play.google.com/music/m/Iqayzaqkmvhu5op3yehzbj5bus4?t%3DScatter_Podcast%26pcampaignid%3DMKT-na-all-co-pr-mu-pod-16)
