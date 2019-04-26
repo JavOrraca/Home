@@ -1,11 +1,10 @@
 ---
 layout: post
-title: "Scatter Podcast: Episode 005 w/ Databricks"
+title: "Forbes: Data Science Career Mention"
 ---
+![](https://raw.githubusercontent.com/JavOrraca/Home/gh-pages/assets/img/Forbes.png)
 
-New episode of Scatter Podcast is online with [Rafi Kurlansik](https://www.linkedin.com/in/raphaelkurlansik/) of Databricks. Rafi has great perspective given his unique opportunities as a data scientist within tech sales and pre-sales teams. He also shares some great resources if you’re interested in learning Databricks, a cloud-based unified analytics platform. Happy Monday!
+I had the priviledge of recently interviewing data rockstar [Alyssa Columbus](https://www.linkedin.com/in/acolum/), Data Scientist at Pacific Life and NASA Datanaut. Forbes interviewed her for a piece on [_How to Get Your Data Scientist Career Started_](https://www.forbes.com/sites/louiscolumbus/2019/04/14/how-to-get-your-data-scientist-career-started/) and she was kind enough to mention Scatter Podcast as a resource for students to keep current on analytics and data science concepts. Great article and espcially beneficial for early career data science job seekers.
 
-Other links:
-* [Databricks](https://databricks.com/)
-* [Databricks Community Edition](https://community.cloud.databricks.com)
-* [MLflow on Databricks](https://mlflow.org/)
+Source:
+* [How to Get Your Data Scientist Career Started](https://www.forbes.com/sites/louiscolumbus/2019/04/14/how-to-get-your-data-scientist-career-started/)
