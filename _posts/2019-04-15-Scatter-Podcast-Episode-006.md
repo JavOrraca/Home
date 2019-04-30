@@ -2,7 +2,6 @@
 layout: post
 title: "Scatter Podcast: Episode 006 w/ T-Mobile"
 ---
-
 [![](https://raw.githubusercontent.com/JavOrraca/Home/gh-pages/assets/img/T-Mobile_Logo.jpg)](https://soundcloud.com/scatterpodcast/episode-006)
 <br>
 On the sixth episode of Scatter Podcast, I'm excited to introduce [Juan Pablo Murillo](https://www.linkedin.com/in/juanpablomurillo/), Data Scientist at T-Mobile at their U.S. headquarters in Bellevue, WA (greater Seattle area). Mathematics instructor turned data scientist, Juan Pablo is in customer analytics and works with engineering and analytics teams to improve the T-Mobile and MetroPCS customer experience. He has been a solid data science mentor for me over the last few months, reviewing, rating, and critiquing some of my R scripts and insights that I derived... Sharp guy and I'm excited to share his data analytics passion with others!
