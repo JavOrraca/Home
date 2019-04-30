@@ -4,6 +4,7 @@ title: "Scatter Podcast: Episode 005 w/ Databricks"
 ---
 
 [![](https://raw.githubusercontent.com/JavOrraca/Home/gh-pages/assets/img/databricks.jpg)](https://soundcloud.com/scatterpodcast/episode-005)
+<br>
 New episode of Scatter Podcast is online with [Rafi Kurlansik](https://www.linkedin.com/in/raphaelkurlansik/) of Databricks. Rafi has great perspective given his unique opportunities as a data scientist within tech sales and pre-sales teams. He also shares some great resources if you’re interested in learning Databricks, a cloud-based unified analytics platform. Happy Monday!
 
 Other links:
