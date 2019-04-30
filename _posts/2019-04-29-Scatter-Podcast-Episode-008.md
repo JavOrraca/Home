@@ -2,7 +2,7 @@
 layout: post
 title: "Scatter Podcast: Episode 008 w/ Chegg"
 ---
-
+<br>
 [![](https://raw.githubusercontent.com/JavOrraca/Home/gh-pages/assets/img/Chegg.png)](https://soundcloud.com/scatterpodcast/episode-008)
 <br>
 <br>
