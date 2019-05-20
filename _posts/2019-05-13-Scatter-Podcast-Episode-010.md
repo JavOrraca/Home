@@ -2,11 +2,8 @@
 layout: post
 title: "Scatter Podcast: Episode 010 w/ FortyFour"
 ---
-<br>
+
 [![](https://raw.githubusercontent.com/JavOrraca/Home/gh-pages/assets/img/FortyFour.jpg)](https://soundcloud.com/scatterpodcast/episode-010)
-<br>
-<br>
-<br>
 
 On [Episode 010 of Scatter Podcast](https://soundcloud.com/scatterpodcast/episode-010), I'm excited to host guest [Ryan Anderson](https://www.linkedin.com/in/theryananderson/), Director of Performance Marketing & Analytics at FortyFour. FortyFour is an independent digital agency based in Atlanta, GA, and Ryan leads their analytics team. Ryan, a Georgia Institute of Technology engineering and MBA alum, was a driving force for me diving into analytics and data science (thank you!).
 

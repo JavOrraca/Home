@@ -2,11 +2,8 @@
 layout: post
 title: "Scatter Podcast: Episode 009 w/ RealBlocks"
 ---
-<br>
+
 [![](https://raw.githubusercontent.com/JavOrraca/Home/gh-pages/assets/img/RealBlocksJPEG.jpg)](https://soundcloud.com/scatterpodcast/episode-009)
-<br>
-<br>
-<br>
 
 On [Episode 009 of Scatter Podcast](https://soundcloud.com/scatterpodcast/episode-009), I'm really excited to release my interview with [Perrin Quarshie](https://www.linkedin.com/in/perrinq/), CEO & Founder of RealBlocks. For those of you interested in real estate, technology, investing, blockchain... This episode is for you!
 
