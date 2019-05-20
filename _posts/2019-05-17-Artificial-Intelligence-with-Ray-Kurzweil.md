@@ -10,6 +10,6 @@ The YouTube link below is of Ray Kurzweil speaking at an MIT deep learning cours
 Bonus for those of you familiar with Markov chains: Kurzweil suspects that we learn via hidden Markov chains in neocortex module hierarchies. If this sounds like jibberish (which it did for me until I watched these videos), Kurzweil explains it easily and eloquently.
 
 Source:
-* [Ray Kurzweil: Future Intelligence](https://youtu.be/9Z06rY3uvGY)
+* [YouTube: Ray Kurzweil's MIT lecture on Future Intelligence](https://youtu.be/9Z06rY3uvGY)
 * [Ray Kurzweil on Wikipedia](https://en.wikipedia.org/wiki/Ray_Kurzweil)
 * [Markov Chains Explained](http://setosa.io/ev/markov-chains/)
