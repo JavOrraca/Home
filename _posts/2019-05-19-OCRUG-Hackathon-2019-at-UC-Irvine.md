@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Winning the OCRUG Hackathon 2019 at UC Irvine"
+title: "Best Model at OC R Users Group 2019 Hackathon"
 ---
 
 ![](https://raw.githubusercontent.com/JavOrraca/Home/gh-pages/assets/img/HackathonBestModel.jpg)
