@@ -2,7 +2,7 @@
 layout: post
 title: "Saving R Data Objects to File for Quick Loading"
 ---
-
+<br>
 ![](https://raw.githubusercontent.com/JavOrraca/Home/gh-pages/assets/img/R-Data-Formats.png)
 
 R users! Are you spending too much time reading large data sets, wrangling, then waiting to convert your data frames to matrices or arrays (and if you're like me, you might be doing a lot of this locally)... All of the sudden, you've got 25-50 GB (or more) worth of vector objects sitting in your environment and it's taken 10-15 minutes to even get to this point where you can begin modeling...
