@@ -11,4 +11,5 @@ Amazon has gotten crazy with their shipping... under no circumstances did I need
 
 
 Source:
-* [Amazon link: _Hands-On Time Series Analysis with R_, published by Packt](https://www.amazon.com/dp/1788629159/ref=cm_sw_em_r_mt_dp_U_E0V-CbDVXPF79 * [Rami Krispin's GitHub](https://github.com/RamiKrispin)
+* [Amazon link: _Hands-On Time Series Analysis with R_, published by Packt](https://www.amazon.com/dp/1788629159/ref=cm_sw_em_r_mt_dp_U_E0V-CbDVXPF79)
+* [Rami Krispin's GitHub](https://github.com/RamiKrispin)
