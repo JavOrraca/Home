@@ -50,10 +50,14 @@ projects:
 # Contact Section
 
 social:
+- {icon: 'linkedin', link: 'https://www.linkedin.com/in/orraca/'}
+- {icon: 'soundcloud', link: 'https://soundcloud.com/scatterpodcast'}
+- {icon: 'envelope', link: 'mailto:orraca.javier@gmail.com'}
+- {icon: 'github', link: 'https://javorraca.github.io/Home'}
 - {icon: 'twitter', link: 'https://twitter.com/Scatter_Podcast'}
 - {icon: 'instagram', link: 'https://www.instagram.com/iwantmorejavier/'}
-- {icon: 'github', link: 'https://javorraca.github.io/Home'}
-- {icon: 'linkedin', link: 'https://www.linkedin.com/in/orraca/'}
-- {icon: 'envelope', link: 'mailto:orraca.javier@gmail.com'}
+
+
+
 
 # social network icons available: 'twitter' / 'facebook' / 'github' / 'pinterest' 'google-plus' / 'linkedin' / 'youtube' / 'instagram' / 'dribbble' / 'behance' / 'soundcloud' / 'vine'
