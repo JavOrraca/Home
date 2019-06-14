@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "voilà: Interactive Jupyter Dashboards"
+title: "voila: Interactive Jupyter Dashboards"
 ---
 
 ![](https://raw.githubusercontent.com/JavOrraca/Home/gh-pages/assets/img/voila.png)
