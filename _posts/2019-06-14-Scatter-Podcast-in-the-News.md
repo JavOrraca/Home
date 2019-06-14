@@ -1,26 +1,16 @@
 ---
 layout: post
-title: "Salesforce Stock Price Prediction via R + Tableau"
+title: "UCI News with Scatter Podcast"
 ---
 
-![](https://raw.githubusercontent.com/JavOrraca/Home/gh-pages/assets/img/Salesforce.jpg)
+![](https://raw.githubusercontent.com/JavOrraca/Home/gh-pages/assets/img/javier-orraca-800x450.jpg)
 
-Where will Salesforce stock (CRM) be at the end of 2019? $178.40! I used R to produce a multi-variate time series model and Tableau to visualize historical CRM stock prices (grey line) vs my model (blue line), including my Dec 2019 prediction (red dot). The model was built in February using historical stock price data from 2004 to 2018. Play around with the Tableau viz (link below)!
+Several months back, I launched Scatter Podcast to share insights about all things "data science" and career tips from leaders in the space. On my podcast, I interview practitioners to demystify what it means to be a data scientist since it has many shapes and forms in business intelligence, advanced analytics, programming, and data storytelling.
 
-Independent Variables:
-* U.S. consumer sentiment index (published by the University of Michigan)
-* GDP
-* CRM historical stock prices
-* Other tech stocks (IBM, Oracle, SAP)
-* Month (as categorical, for seasonality)
-
-High-level model process:
-* Linear regression model created for log-transformed historical data
-* Uni-variate ARIMA time series models produced for each independent variable (excluding month)
-* ARIMA model output used to predict monthly 2019 data points and these data points were then log-transformed
-* Log-transformed ARIMA data points joined into one data set and processed as input to the original linear regression model created above
-* Linear regression score outputs were exponentiated
-* The model coefficients were incorporated into Tableau for a "what-if" style interactive visualization
+The UCI Paul Merage School of Business recently interviewed me and published an article about my work with Scatter Podcast (link below). To UCI Merage, all of my talented professors, mentors, and especially my listeners, thank you for the love! I've reconnected with and met incredibly talented people, and I'm excited to see where this project goes.
 
 Source:
-* [Javier's Salesforce Stock Prediction on Tableau Public](https://public.tableau.com/profile/javier.orraca#!/vizhome/SalesforceStockPrediction/StockPrediction)
+* [Podcast Launched by Merage Student Navigates Complex Field of Data Analytics and Science, by Jessie Yount](https://merage.uci.edu/news/2019/06/podcast-launched-by-merage-student-navigates-complex-field-of-data-analytics-and-science.html)
+* [Scatter Podcast mention on Forbes (April 2019)](https://www.forbes.com/sites/louiscolumbus/2019/04/14/how-to-get-your-data-scientist-career-started/)
+
+Scatter Podcast is available on [SoundCloud](https://soundcloud.com/scatterpodcast), [iTunes & Apple Podcasts](https://podcasts.apple.com/us/podcast/scatter-podcast/id1458544194), [Spotify](https://open.spotify.com/show/64UpJwByrdsrLSYObuEeHx?si=n_UlBzrYQv6ptBjeXfSOsw), [TuneIn](https://tunein.com/podcasts/Business--Economics-Podcasts/Scatter-Podcast-p1216105/), [Google Play Music](https://playmusic.app.goo.gl/?ibi=com.google.PlayMusic&isi=691797987&ius=googleplaymusic&apn=com.google.android.music&link=https://play.google.com/music/m/Iqayzaqkmvhu5op3yehzbj5bus4?t%3DScatter_Podcast%26pcampaignid%3DMKT-na-all-co-pr-mu-pod-16), [Stitcher Radio](https://www.stitcher.com/podcast/scatter-podcast/httpssoundcloudcomscatterpodcast), [Castbox](https://castbox.fm/channel/id2083174), and [Podcast Republic](https://www.podcastrepublic.net/podcast/1458544194).
