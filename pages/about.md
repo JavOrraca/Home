@@ -3,7 +3,7 @@ layout: post
 title: "About"
 ---
 
-![](https://raw.githubusercontent.com/JavOrraca/Home/gh-pages/assets/img/Javier.jpg)
+![](https://raw.githubusercontent.com/JavOrraca/Home/gh-pages/assets/img/Javier_Portugal.jpg)
 
 Welcome to my GitHub! My name is Javier ("Jav") Orraca and I recently graduated from a data science and business analytics masters program at the University of California, Irvine. This new STEM-certified Masters of Science degree is a hybrid business and data science program enabling us to support our digitally driven world.
 
